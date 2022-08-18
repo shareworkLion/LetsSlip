@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 #from .models import FollowUser
 
 
-def logins(request):
+def login(request):
     if request.method == "POST":
         userid = request.POST['username']
         pwd = request.POST['password']
@@ -13,9 +13,9 @@ def logins(request):
             auth.login(request, user)
             return render(request, 'home.html')
         else:
-            return render(request, 'logins.html')
+            return render(request, 'login.html')
     else:
-        return render(request, 'logins.html')
+        return render(request, 'login.html')
 
 def logout(request):
     auth.logout(request)
@@ -26,7 +26,7 @@ def signup(request):
         if request.POST['password'] == request.POST['confirm']:
             user = User.objects.create_user(username=request.POST['username'], password=request.POST['password'])
             auth.login(request, user)
-            return render(request, 'logins.html')
+            return render(request, 'login.html')
     return render(request, 'signup.html')
 
 # # 팔로우 기능

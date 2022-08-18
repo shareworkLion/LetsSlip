@@ -18,7 +18,7 @@ urlpatterns = [
     path('post_like_toggle/<int:post_id>', views.post_like_toggle, name='post_like_toggle'),
     
     # accounts
-    path('logins/', accounts_views.logins, name='logins'),
+    path('login/', accounts_views.login, name='login'),
     path('logout/', accounts_views.logout, name='logout'),
     path('signup/', accounts_views.signup, name='signup'),
     #path('follow/<int:likes_user>', accounts_views.follow, name='follow'),
