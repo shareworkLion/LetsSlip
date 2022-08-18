@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('mygallery/', views.mygallery, name='mygallery'),
 
     # LsApp
     path('', views.home, name='home'), # 유저 페이지
@@ -21,6 +23,6 @@ urlpatterns = [
     path('login/', accounts_views.login, name='login'),
     path('logout/', accounts_views.logout, name='logout'),
     path('signup/', accounts_views.signup, name='signup'),
-    #path('follow/<int:likes_user>', accounts_views.follow, name='follow'),
+    path('signup2/', accounts_views.signup2, name='signup2'),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

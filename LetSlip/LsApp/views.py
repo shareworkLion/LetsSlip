@@ -4,15 +4,40 @@ from .forms import PostForm, CommentForm, CommentReplyForm
 from django.core.paginator import Paginator
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib import auth
+from .models import Member
 
-# 일단 이 부분을 본인 갤러리로 두고 구현했음
+
 def home(request):
-    # posts = Post.objects.all() 
-    posts = Post.objects.filter().order_by('-date')
-    paginator = Paginator(posts, 6)
-    pagenum = request.GET.get('page')
-    posts = paginator.get_page(pagenum)
-    return render(request, 'home.html', {'posts': posts})
+    if request.method == "POST":
+        userid = request.POST['userid']
+        pwd = request.POST['password']
+        user = auth.authenticate(request, userid=userid, password=pwd)
+        if user is not None:
+            auth.login(request, user)
+            return render(request, 'home.html')
+        else:
+            return render(request, 'login.html')
+    else:
+        return render(request, 'index.html')
+
+
+# 유저 갤러리 
+def mygallery(request):
+    if request.method == "POST":
+        if request.session['loginOk'] == True:
+            # m_id= request.session['id']
+            # pwd= request.session['pwd']
+            return render(request, 'join.html')
+        else:
+            return redirect('login.html')
+    else:
+        if request.session['loginOk'] == True:
+            m_id= request.session['id']
+            pwd= request.session['pwd']
+            return render(request, 'my_gallery_category.html')
+        else:
+            return redirect('login.html')
 
 
 # 새 갤러리 생성
