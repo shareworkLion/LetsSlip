@@ -1,0 +1,45 @@
+<h1>생성한 글 확인</h1>
+
+<h2> 제목 : {{ detail.title }}</h2>
+
+<h2> 카테고리 </h2>
+{{ detail.category }}
+
+<h2> 날짜 </h2>
+{{ detail.date|date:'Y.m.d' }}
+
+<h2> 본문 </h2>
+{{ detail.body }}
+
+{% if detail.photo %}
+<img src = "{{ detail.photo.url }}" alt="" height="200">
+{% endif %}
+
+
+<hr>
+
+<h3>댓글</h3>
+<br>
+
+{% for comment in detail.comment_set.all %}
+    <P>{{ comment }} | {{ comment.comment_name }} | {{ comment.created_at|date:'Y.m.d' }}</P>
+    {% for content in comment.commentreply_set.all %}
+        <P>&nbsp&nbsp ↳  {{ content }} | {{ content.comment_reply_name }} | {{ content.upload_at|date:'Y.m.d' }}</P>
+    {% endfor %}
+    {% if detail.comment_set.count > 0 %}
+        <form method="POST" action="{% url 'commentreply' comment.id %}">
+            {% csrf_token %}
+            {{ comment_reply_form }}
+            <input type = "submit" value="대댓글 입력">
+        </form>
+    {% endif %}
+{% empty %}
+    <p>댓글이 없습니다.</p>
+{% endfor %}
+
+<hr>
+<form method="POST" action="{% url 'comment_new' detail.id %}">
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type = "submit" value="댓글 입력">
+</form>

@@ -1,0 +1,250 @@
+<!--  메인 화면 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GOOGLE ICON -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RESET CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <title>MAIN PAGE</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/test.js"></script>
+
+  </head>
+  <body>
+    <!-- HEADER -->
+    <ul class="nav justify-content-center pt-1 pb-1">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btnLogo"
+          aria-current="page"
+          href="./index.html"
+        >
+          <img src="../img/Logo.png" alt="Let's Slip" />
+        </a>
+      </li>
+      <li class="nav-item aboutus">
+        <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
+          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+        </a>
+      </li>
+      <div class="inputWrapper">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+          aria-label="Search"
+        />
+        <button class="material-icons btnSearch" type="submit">
+          search
+        </button>
+      </div>
+      <li class="nav-item">
+        <a
+          class="mt-1 nav-link"
+          id="btnToMyGalleryRainbow"
+          href="./html/my_gallery_category.html"
+        >
+          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/login.html">
+          <img src="../img/Button/Btn_openGallery.png" alt="" />
+        </a>
+      </li>
+      <li calss="nav-item">
+        <a class="mt-1 nav-link" href="./html/myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+          <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- MAIN SECTION -->
+    <section class="mainSection1">
+      <img src="../img/Main_Title.png" alt="Let's Slip" />
+      <div class="inner">
+        <div class="row mainSection1-container">
+          <div class="col number">9327</div>
+          <div class="col contaienr2">
+            <p id="MainNum">Today's New Slip</p>
+            <p id="MainMsg">오늘 0000개의 작품이 전시되고 있어요</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN GALLERY -->
+    <section class="mainGallery p-3">
+      <div class="inner main-gallery-wrapper">
+        <div class="arrow-wrapper">
+          <div class="material-icons btnForward" onclick="btnForwardClicked()">
+            arrow_back_ios_new
+          </div>
+        </div>
+        <div class="img-wrapper">
+          <div class="mt-4 row">
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+          <div class="mb-4 row">
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="col item">
+              <a href="./html/otherUserSlip.html">
+                <img
+                  class="main-contents-img"
+                  src="./img/Main_exGalleryImg.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-wrapper">
+          <div class="material-icons btnNext" onclick="btnNextClicked()">
+            arrow_forward_ios
+          </div>
+        </div>
+      </div>
+      <div class="mb-4 gallery-btn-wrapper">
+        <!-- 페이지 인덱스에 따라 pagination 이미지 수정 -> js로 처리 -->
+        <button class="gallery-page-1">
+          <img src="../img/Button/Btn_GalleryPaginationActice.png" alt="" />
+        </button>
+        <button class="gallery-page-2">
+          <img src="../img/Button/Btn_GalleryPaginationDisabled.png" alt="" />
+        </button>
+        <button class="gallery-page-3">
+          <img src="../img/Button/Btn_GalleryPaginationDisabled.png" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <!-- MAIN KEYWORD SECTION -->
+    <section class="mainKeywordSection">
+      <div class="inner">
+        <div class="mt-5 mb-5 pt-5 pb-5 wrapper">
+          <div class="container1">
+            <p class="KeywordTitle">Hot Slip #Keyword</p>
+            <p>현재 가장 많이 사용되는 Slip Keyword를 확인하세요</p>
+          </div>
+          <div class="container2">
+            <img
+              class="mainKeywordBtn1"
+              src="./img/Hash/Hash_Exam.png"
+              alt=""
+            />
+            <img class="mainKeywordBtn2" src="./img/Hash/Hash_Job.png" alt="" />
+            <img
+              class="mainKeywordBtn3"
+              src="./img/Hash/Hash_Study.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="w-75 m-auto bigWrapper">
+        <div class="smallWrapper">
+          <div class="container1">
+            <img src="/./img/Logo.png" alt="." />
+            <p>실패를 전시하는 갤러리</p>
+          </div>
+          <div class="container2">
+            <div class="container3">
+              <a href="javascript:void">이용약관</a>
+              <a href="javascript:void">이용안내</a>
+              <a href="javascript:void">운영정책</a>
+            </div>
+            <p>서울시 노원구 화랑로 621</p>
+          </div>
+        </div>
+        <hr />
+        <a href="javascript:void">
+          <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+        </a>
+      </div>
+    </footer>
+
+  </body>
+</html>

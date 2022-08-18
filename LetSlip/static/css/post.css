@@ -1,0 +1,106 @@
+body {
+    line-height: 1.4;
+    font-family: "Noto Sans KR", sans-serif;
+
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  /* INNER */
+  .inner {
+    width: 900px;
+    margin: 0 auto;
+    /* position: relative; */
+  }
+  
+  /* HEADER */
+  .nav #toAboutUs {
+    visibility: hidden;
+  }
+  .nav .inputWrapper {
+    position: relative;
+    width: 420px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    margin: 10px 30px;
+  }
+  .nav .inputWrapper input[type="search"] {
+    width: 80%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    margin-left: 5%;
+  }
+  .nav .inputWrapper .btnSearch {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    background-color: rgba(0,0,0,0);
+    border: none;
+  }
+
+
+  .writePost .defaultImg {
+    float: left;
+  }
+  .writePost .defaultText {
+    float:right;
+  }
+  .writePost .defaultText input {
+    margin-top: 10px;
+    width: 300px;
+  }
+
+  .resultBox {
+    margin-top: 20px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 3px 3px 3px 3px rgb(155, 155, 155);
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .sun {
+    clear: both;
+  }
+
+  .title {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .subtitle {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .textArea {
+    width: auto;
+    height: 200px;
+  }
+  .sun2 {
+    margin-top: 10px;
+  }
+
+  .radioQ {
+    font-weight: bold;
+  }
+
+  .PostBtn {
+    float: right;
+    width: 200px;
+    height: auto;
+    border: 1px solid white;
+    background: linear-gradient(150deg, red, orange, yellow, green, rgb(70, 184, 255), rgb(41, 41, 255), purple);
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .PostBtn:hover{
+    border: 1px solid white;
+    opacity: 0.9;
+  }

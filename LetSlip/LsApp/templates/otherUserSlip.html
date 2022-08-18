@@ -1,0 +1,376 @@
+<!-- 다른 유저 슬립 감상화면_1. Slip만 작성한 경우-->
+<!-- 다른 유저 슬립 감상화면_2.성공기도 작성한 경우 -->
+
+<!-- 감상평 작성 화면_1. Slip만 작성된 글 -->
+<!-- 감상평 작성 화면_2. 성공기도 작성한 경우 -->
+<!-- 답글 작성 화면_1. Slip만 작성된 글 -->
+<!-- 답글 작성 화면_2. 성공기도 작성한 경우 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- GOOGLE ICON -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RESET CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <title>OTHER USER SLIP PAGE</title>
+    <link rel="stylesheet" href="/./css/otherUserSlip.css" />
+    <script defer src="../js/test.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <ul class="nav justify-content-center pt-1 pb-1">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btnLogo"
+          aria-current="page"
+          href="../index.html"
+        >
+          <img src="../img/Logo.png" alt="Let's Slip" />
+        </a>
+      </li>
+      <li class="nav-item aboutus">
+        <a class="nav-link" id="toAboutUs" href="./aboutUs.html">
+          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+        </a>
+      </li>
+      <div class="inputWrapper">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+          aria-label="Search"
+        />
+        <button class="material-icons btnSearch" type="submit">
+          search
+        </button>
+      </div>
+      <li class="nav-item">
+        <a
+          class="mt-1 nav-link"
+          id="btnToMyGalleryRainbow"
+          href="./my_gallery_category.html"
+        >
+          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="./login.html">
+          <img src="../img/Button/Btn_openGallery.png" alt="" />
+        </a>
+      </li>
+      <li calss="nav-item" style="visibility: hidden;">
+        <a class="mt-1 nav-link" href="./myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+          <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="pb-5 inner">
+      <!-- 목록으로 -->
+      <button class="m-4 backBtn">
+        <span class="material-icons">arrow_back</span>
+        <div>목록으로</div>
+      </button>
+
+      <!-- MY SLIP PROFILE -->
+      <section class="m-5 profile-container">
+        <div class="big-wrapper">
+          <div class="img-wrapper">
+            <img id="myProfileImg" src="../img/Main_exGalleryImg.png" alt="" />
+          </div>
+          <div class="small-wrapper">
+            <img src="../img/Hash/Hash_Life.png" alt="" />
+            <div class="mt-1 mb-3 mySlipTitle">내 미래도 저무는 중</div>
+            <div class="p-3 table-box">
+              <table class="ml-1 mr-1 table">
+                <tbody>
+                  <tr>
+                    <td>작가:</td>
+                    <td id="Author">Hi Susan</td>
+                  </tr>
+                  <tr>
+                    <td>응원 수:</td>
+                    <td id="cheersNum">5</td>
+                  </tr>
+                  <tr>
+                    <td>제작 일시:</td>
+                    <td id="makeDate">2022.08.06</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 아이콘 - 수정/업로드 -->
+      <div class="icon-wrapper">
+        <button id="btnFollow" onclick="btnFollowClicked()">
+          <img src="../img/Button/Btn_Follow.png" alt="" />
+        </button>
+        <button id="btnScrap" onclick="btnScrapClicked()">
+          <img src="../img/Button/Btn_Scrap.png" alt="" />
+        </button>
+      </div>
+
+      <!-- 구분선 -->
+      <hr />
+
+      <!-- Slip 작품 소개 -->
+      <section class="introWork">
+        <p class="p-4">Slip 작품 소개</p>
+        <div class="container work-container">
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">01</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              시험까지 남은 기간이 2주인만큼 지금은 선택과 집중이 필요한 것
+              같다. 너무 거창한 계획을 세우기보단, 하루에 할 수 있는 양을
+              파악해서 가장 중요한 범위를 우선적으로 공부하는 것이 좋을 것 같다.
+              그리고 다음에 시험을 준비할 때에는 시간이 많이 남았을 때 미리
+              공부해서 잘 준비된 상태로 시험을 보러 가고 싶다.
+            </div>
+          </div>
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">02</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              시험까지 남은 기간이 2주인만큼 지금은 선택과 집중이 필요한 것
+              같다. 너무 거창한 계획을 세우기보단, 하루에 할 수 있는 양을
+              파악해서 가장 중요한 범위를 우선적으로 공부하는 것이 좋을 것 같다.
+              그리고 다음에 시험을 준비할 때에는 시간이 많이 남았을 때 미리
+              공부해서 잘 준비된 상태로 시험을 보러 가고 싶다.
+            </div>
+          </div>
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">03</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              시험까지 남은 기간이 2주인만큼 지금은 선택과 집중이 필요한 것
+              같다. 너무 거창한 계획을 세우기보단, 하루에 할 수 있는 양을
+              파악해서 가장 중요한 범위를 우선적으로 공부하는 것이 좋을 것 같다.
+              그리고 다음에 시험을 준비할 때에는 시간이 많이 남았을 때 미리
+              공부해서 잘 준비된 상태로 시험을 보러 가고 싶다.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 구분선 -->
+      <hr />
+
+      <!-- Slip 성공기 작품 소개 -->
+      <section class="introSuccessWork">
+        <p class="p-4">Slip 이후의 성공 이야기</p>
+        <div class="container work-container">
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">01</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              스며들어 싹이 이것을 되려니와, 이상은 같은 꽃이 보라. 웅대한 청춘
+              방지하는 힘차게 설레는 아니다. 피에 얼마나 얼마나 무엇을 힘차게
+              있다. 청춘의 군영과 끓는 기관과 그들은 무한한 방지하는 보이는
+              피다. 귀는 오아이스도 옷을 그들의 못하다 피가 수 쓸쓸하랴?
+              노년에게서 얼마나 생명을 설산에서 날카로우나 듣는다. 그들의
+              현저하게 얼마나 인생에 방황하여도, 무엇을 끓는다. 따뜻한 그들에게
+              어디 위하여서. 때에, 용기가 하였으며, 군영과 품었기 행복스럽고
+              같은 찾아다녀도, 아름다우냐? 타오르고 얼마나 사랑의 대고, 열매를
+              현저하게 힘있다. 풍부하게 석가는 이 듣기만 끓는다.
+            </div>
+          </div>
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">02</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              스며들어 싹이 이것을 되려니와, 이상은 같은 꽃이 보라. 웅대한 청춘
+              방지하는 힘차게 설레는 아니다. 피에 얼마나 얼마나 무엇을 힘차게
+              있다. 청춘의 군영과 끓는 기관과 그들은 무한한 방지하는 보이는
+              피다. 귀는 오아이스도 옷을 그들의 못하다 피가 수 쓸쓸하랴?
+              노년에게서 얼마나 생명을 설산에서 날카로우나 듣는다. 그들의
+              현저하게 얼마나 인생에 방황하여도, 무엇을 끓는다. 따뜻한 그들에게
+              어디 위하여서. 때에, 용기가 하였으며, 군영과 품었기 행복스럽고
+              같은 찾아다녀도, 아름다우냐? 타오르고 얼마나 사랑의 대고, 열매를
+              현저하게 힘있다. 풍부하게 석가는 이 듣기만 끓는다.
+            </div>
+          </div>
+          <div class="col-md-4 col-sm p-4 work-wrapper">
+            <div class="pb-1 workNum">03</div>
+            <div class="pb-4 workTitle">당신의 Slip을 들려주세요</div>
+            <div class="workContents">
+              스며들어 싹이 이것을 되려니와, 이상은 같은 꽃이 보라. 웅대한 청춘
+              방지하는 힘차게 설레는 아니다. 피에 얼마나 얼마나 무엇을 힘차게
+              있다. 청춘의 군영과 끓는 기관과 그들은 무한한 방지하는 보이는
+              피다. 귀는 오아이스도 옷을 그들의 못하다 피가 수 쓸쓸하랴?
+              노년에게서 얼마나 생명을 설산에서 날카로우나 듣는다. 그들의
+              현저하게 얼마나 인생에 방황하여도, 무엇을 끓는다. 따뜻한 그들에게
+              어디 위하여서. 때에, 용기가 하였으며, 군영과 품었기 행복스럽고
+              같은 찾아다녀도, 아름다우냐? 타오르고 얼마나 사랑의 대고, 열매를
+              현저하게 힘있다. 풍부하게 석가는 이 듣기만 끓는다.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 구분선 -->
+      <hr />
+
+      <!-- 아이콘 - 좋아요, 코멘트 -->
+      <div class="icon-wrapper">
+        <button id="btnComments" onclick="btnCommentsCliked()">
+          <img
+            src="../img/Button/Button_reverse/Btn_CommentsSmall_Rev.png"
+            alt=""
+          />
+        </button>
+        <button id="btnLikes" onclick="btnCommentsClicked()">
+          <img src="../img/Button/Btn_Likes.png" alt="" />
+        </button>
+      </div>
+
+      <!-- 답글 보기 -->
+      <section class="slipComments">
+        <hr />
+
+        <div class="comments-wrapper">
+          <div class="mb-4 mt-4 comments-container1">
+            <p class="me-2" style="font-size: 22px; font-weight: 700">감상평</p>
+            <p class="me-2" style="font-weight: 700">.</p>
+            <div
+              class="ms-2 comments-num"
+              style="font-size: 22px; font-weight: 700"
+            >
+              87
+            </div>
+          </div>
+          <div class="ps-2 mb-3 comments-container2">
+            <img
+              class="me-3 comments-userimg"
+              src="../img/Comments_Profile.png"
+              alt=""
+            />
+            <div class="comments-container2-wrapper">
+              <div class="me-4 comments-username">Troye</div>
+              <p class="me-3" style="color: #676565">|</p>
+              <div class="comments-date" style="color: #676565">2022.08.06</div>
+            </div>
+          </div>
+          <div class="mb-2 comments-container3">
+            <div class="comments-contents">
+              <p>
+                실수를 하고 정말 당황스러우셨을 텐데 이유를 찾고 나아지기 위해
+                노력하는 모습이 멋집니다! 팔로우도 했어요ㅎㅎ 저도 앞으로
+                Robert님을 응원하겠습니다. 시간 되실 때 제 갤러리도 놀러 오세요!
+              </p>
+            </div>
+          </div>
+          <div class="mb-3 comments-container4">
+            <button class="btnNestedComments">
+              <img
+                src="../img/Button/Btn_Comments.png"
+                onclick="btnNestedCommentsClicked()"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <!-- 대댓글 달기 -->
+          <section class="nestedReply">
+            <div class="nestedreply-wrapper">
+              <div class="material-icons nestIcon">
+                subdirectory_arrow_right
+              </div>
+              <form class="nestedReply" action="">
+                <textarea
+                  name="comments"
+                  id="comments"
+                  cols="30"
+                  rows="5"
+                  placeholder="Sliper가 작성한 감상평에 답글을 적어 주세요"
+                ></textarea>
+                <input
+                  type="image"
+                  src="../img/Button/Btn_CommentsUpload.png"
+                  name="btnWrtieComment"
+                  id=""
+                />
+              </form>
+            </div>
+          </section>
+
+          <div class="mt-4 mb-4 pt-4 pb-4 comments-container5">
+            <!-- pagination -->
+            <div class="material-icons">arrow_back_ios</div>
+            <a class="active" href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            <a href="">9</a>
+            <a href="">10</a>
+            <div class="material-icons">arrow_forward_ios</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 감상평 적기 -->
+      <section class="mt-4 createComments">
+        <hr />
+
+        <div class="create-comments-wrapper">
+          <form class="writeComments" action="">
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="5"
+              placeholder="Slip 작품에 대한 감상평을 적어 주세요"
+            ></textarea>
+            <input
+              type="image"
+              src="../img/Button/Btn_CommentsUpload.png"
+              name="btnWrtieComment"
+              id=""
+            />
+          </form>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

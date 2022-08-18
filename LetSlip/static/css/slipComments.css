@@ -1,0 +1,225 @@
+/* COMMON */
+body {
+  line-height: 1.4;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  display: block;
+  padding: 0;
+}
+.icon-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.icon-wrapper button {
+  padding: 0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.icon-wrapper button img {
+  width: 100%;
+  height: 100%;
+}
+.comments-container4 button img {
+  width: 80%;
+}
+
+/* INNER */
+.inner {
+  width: 900px;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+/* HEADER */
+.nav {
+  background-color: #000;
+}
+.nav .aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .inputWrapper {
+  position: relative;
+  width: 420px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  margin: 10px 30px;
+}
+.nav .inputWrapper input[type="search"] {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+}
+.nav .inputWrapper .btnSearch {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.nav .aboutus,
+.nav .inputWrapper,
+.nav #btnToMyGalleryRainbow,
+.nav #btnOpenGallery {
+  visibility: hidden;
+}
+
+/* 목록으로 */
+.backBtn {
+  display: flex;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* MY SLIP PROFILE */
+.profile-container .big-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.profile-container .big-wrapper .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-container .small-wrapper {
+  padding: 40px;
+}
+.profile-container .small-wrapper img {
+  width: 70px;
+  margin-top: 20px;
+}
+.profile-container .small-wrapper .mySlipTitle {
+  font-weight: 700;
+}
+.table-box {
+  /* border: 2px solid #000; */
+  /* box-shadow: 5px 5px #585858; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.table {
+  margin-bottom: 0;
+  margin-left: 15px;
+  margin-right: 25px;
+}
+.table #Author,
+.table #cheersNum,
+.table #makeDate {
+  padding-right: 15px;
+}
+
+/* Slip 작품 소개 */
+.introWork p,
+.introSuccessWork p {
+  font-size: 26px;
+}
+.work-container {
+  display: flex;
+  word-break: break-all;
+  text-align: justify;
+  padding-bottom: 200px;
+}
+.work-container .workNum,
+.work-container .workTitle {
+  font-size: 20px;
+}
+
+/* 답글 보기  */
+.slipComments .comments-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.slipComments .comments-container1 {
+  display: flex;
+}
+.slipComments .comments-container2 {
+  height: 50px;
+  display: flex;
+}
+.slipComments .comments-container2 img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
+  margin-top: auto;
+}
+.slipComments .comments-container2 .comments-container2-wrapper {
+  display: flex;
+  margin: auto 0;
+}
+.slipComments .comments-container3 {
+}
+.slipComments .comments-container4 {
+  display: flex;
+  justify-content: right;
+}
+.slipComments .comments-container5 {
+  display: flex;
+  justify-content: center;
+}
+.slipComments .comments-container5 a {
+  color: #676565;
+  margin: 0 5px;
+}
+.slipComments .comments-container5 a:active {
+  color: #000;
+}
+
+.createComments .create-comments-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+.createComments .create-comments-wrapper .comments-container4 {
+  display: flex;
+  justify-content: right;
+}
+.nestedreply-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  margin-left: auto;
+}
+.nestedreply-wrapper .nestIcon {
+  color: #676565;
+  opacity: 0.5;
+  margin: auto 20px;
+  font-size: 40px;
+  font-weight: 700;
+}
+.nestedreply-wrapper form {
+  flex-grow: 1;
+}
+.nestedreply-wrapper textarea {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.nestedreply-wrapper input {
+  width: 42px;
+  float: right;
+}
+.writeComments input {
+  width: 42px;
+  float: right;
+}
+.writeComments textarea {
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}

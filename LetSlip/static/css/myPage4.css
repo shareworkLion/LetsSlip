@@ -1,0 +1,136 @@
+/* COMMON */
+body {
+  line-height: 1.4;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+/* INNER */
+.inner {
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.nav {
+  background-color: #000;
+}
+.nav .aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .inputWrapper {
+  position: relative;
+  width: 420px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  margin: 10px 30px;
+}
+.nav .inputWrapper input[type="search"] {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+}
+.nav .inputWrapper .btnSearch {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.nav .aboutus {
+  visibility: hidden;
+}
+
+/* Change Password Section */
+.backBtn {
+  display: flex;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+.container {
+  text-align: center;
+}
+.container p {
+  padding: 5px;
+}
+.container .small-wrapper {
+  width: 65%;
+  margin: 0 auto;
+}
+.container .form-control {
+  /* width: 300px; */
+  height: 50px;
+  border: 2px solid;
+  border-image: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    rgb(52, 140, 255),
+    rgb(43, 43, 255),
+    purple
+  );
+  border-image-slice: 1;
+}
+.msg {
+  text-align: right;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.412);
+  visibility: hidden;
+}
+.changePw {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  justify-content: center;
+  padding: 0;
+  margin: 20px 0;
+}
+.changePw img {
+  width: 100%;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 200px;
+  padding: 30px 0;
+}
+.footer .bigWrapper {
+  width: 70%;
+  margin: auto;
+}
+.footer .bigWrapper hr {
+  /* width: 100%; */
+  border: 0.5px solid #fff;
+}
+.footer .smallWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+.footer .container2 a {
+  margin: 10px;
+}
+.footer .container2 p {
+  margin-left: 10px;
+}
+.footer .container3 {
+  display: flex;
+}
+.footer .container3 a {
+  color: #fff;
+}
+.footer #instagram {
+  float: right;
+}

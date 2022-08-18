@@ -1,0 +1,23 @@
+<h1>검색된 내용</h1>
+<br>
+카테고리 "{{ keyword }}" 게시글 {{ posts.count }}개 <br>
+<br><br>
+
+<tbody>
+    {% for post in posts.all %}
+    <tr>
+        {% if post.photo %}
+        <img src = "{{ post.photo.url }}" alt="" height="200">
+        {% endif %}<br>
+        <td><a href = "{% url 'post_detail' post.id %}">제목 : {{ post.title }}</a></td><br>
+        <td>카테고리 : {{ post.category }}</td><br>
+        <td>본문 : {{ post.body }}</td><br>
+        <td>작성자 : {{ post.author.username }} / </td>
+        <td>작성 날짜 : {{ post.date|date:'Y.m.d' }}</td><br>
+        <hr>
+    </tr>
+    <br><br>
+    {% endfor %}
+</tbody>
+
+

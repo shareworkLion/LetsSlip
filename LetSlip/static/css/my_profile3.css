@@ -1,0 +1,210 @@
+/* COMMON */
+/* COMMON */
+body {
+    line-height: 1.4;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* INNER */
+  .inner {
+    width: 900px;
+    margin: 0 auto;
+    /* position: relative; */
+  }
+  
+  /* HEADER */
+  .nav {
+    background-color: #000;
+  }
+  .nav .aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav .inputWrapper {
+    position: relative;
+    width: 420px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    margin: 10px 30px;
+  }
+  .nav .inputWrapper input[type="search"] {
+    width: 80%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    margin-left: 5%;
+  }
+  .nav .inputWrapper .btnSearch {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  
+  
+    /* MY PAGE MAIN SECTION */
+    .myProfile {
+      margin-top: 30px;
+      margin-right: 150px;
+      margin-left: 150px;
+    }
+  
+    .profileImg {
+      float: left;
+    }
+    
+    .profileText{
+      float: right;
+    }
+  
+    .galleryTitle{
+      font-weight: bold;
+    }
+  
+    .profileBtn {
+      float: right;
+      
+    }
+     .profileBtn1{
+      width: 30px;
+     }
+  
+    .slipTime{
+      clear: right;
+      background-color:#000;
+      height: 100px;
+      padding-top: 40px;
+      text-align: center;
+    }
+  
+    .slipTimeText {
+      color: white;
+      font-weight: bold;
+      margin-right: 40px;
+    }
+  
+    .nav-link {
+      color: #000;
+    }
+    .nav-link:hover{
+      color: #000;
+      font-weight: bold;
+    }
+    .nav-link:focus{
+      color: #000;
+      font-weight: bold;
+      
+    }
+  
+  
+    .reulstTitle2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .following {
+      display: flex;
+      justify-content: center;
+    }
+   
+    .title3 {
+      background: linear-gradient(90deg, rgb(255, 51, 0), rgb(180, 0, 0), rgb(210, 172, 1), rgb(29, 142, 6), rgb(52, 140, 255), rgb(43, 43, 255), purple);
+      -webkit-background-clip: text;
+      color:transparent;
+      font-weight: bold;
+    }
+  
+     .following-item{
+      margin-left: 100px;
+      margin-right: 100px;
+     }
+  
+     .searchSuccessHeader {
+      color: #000;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 35px;
+  
+    }
+    .resultImg{
+      float: left;
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+  
+    .profile{
+      text-align: center;
+      font-weight: bold;
+    }
+    .resultTitle {
+      font-weight: bold;
+      font-size: large;
+      margin-bottom: 10px;
+    }
+  
+    span{
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+  
+    .reulstTitle2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    .page-link {
+      color: #000;
+    }
+    .page-link:hover{
+      color: #000;
+    }
+   
+    /* FOOTER */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    height: 200px;
+    padding: 30px 0;
+  }
+  .footer .bigWrapper {
+    width: 70%;
+    margin: auto;
+  }
+  .footer .bigWrapper hr {
+    /* width: 100%; */
+    border: 0.5px solid #fff;
+  }
+  .footer .smallWrapper {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+  }
+  .footer .container2 a {
+    margin: 10px;
+  }
+  .footer .container2 p {
+    margin-left: 10px;
+  }
+  .footer .container3 {
+    display: flex;
+  }
+  .footer .container3 a {
+    color: #fff;
+  }
+  .footer #instagram {
+    float: right;
+  }
+  
+  
+    

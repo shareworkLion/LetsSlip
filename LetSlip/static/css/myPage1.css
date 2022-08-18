@@ -1,0 +1,120 @@
+/* COMMON */
+body {
+  line-height: 1.4;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+}
+
+/* INNER */
+.inner {
+  width: 900px;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+/* HEADER */
+.nav {
+  background-color: #000;
+}
+.nav .aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .inputWrapper {
+  position: relative;
+  width: 420px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  margin: 10px 30px;
+}
+.nav .inputWrapper input[type="search"] {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+}
+.nav .inputWrapper .btnSearch {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.nav .aboutus {
+  visibility: hidden;
+}
+
+/* MY PAGE MAIN SECTION */
+.myPageHeader {
+  background-color: #000;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+}
+.myPageMainSection .mypage-big-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.myPageMainSection .mypage-small-wrapper {
+  padding: 2.5rem;
+}
+.myPageMainSection .mypage-small-wrapper .mypage-title {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.myPageMainSection .mypage-small-wrapper .container {
+  padding: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+.myPageMainSection .mypage-small-wrapper .container a {
+  margin: 20px 0;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 200px;
+  padding: 30px 0;
+}
+.footer .bigWrapper {
+  width: 70%;
+  margin: auto;
+}
+.footer .bigWrapper hr {
+  /* width: 100%; */
+  border: 0.5px solid #fff;
+}
+.footer .smallWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+.footer .container2 a {
+  margin: 10px;
+}
+.footer .container2 p {
+  margin-left: 10px;
+}
+.footer .container3 {
+  display: flex;
+}
+.footer .container3 a {
+  color: #fff;
+}
+.footer #instagram {
+  float: right;
+}

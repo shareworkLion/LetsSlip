@@ -1,0 +1,221 @@
+<!--유저 갤러리 화면 1_2 프로필 편집하기-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PAGE</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+    <link rel="stylesheet" href="/./css/my_profile4.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <ul class="nav justify-content-center pt-1 pb-1">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          id="btnLogo"
+          aria-current="page"
+          href="./index.html"
+        >
+          <img src="../img/Logo.png" alt="Let's Slip" />
+        </a>
+      </li>
+      <li class="nav-item aboutus">
+        <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
+          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+        </a>
+      </li>
+      <div class="inputWrapper">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+          aria-label="Search"
+        />
+        <button class="material-icons btnSearch" type="submit">
+          search
+        </button>
+      </div>
+      <li class="nav-item">
+        <a
+          class="mt-1 nav-link"
+          id="btnToMyGalleryRainbow"
+          href="./html/my_gallery_category.html"
+        >
+          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/login.html">
+          <img src="../img/Button/Btn_openGallery.png" alt="" />
+        </a>
+      </li>
+      <li calss="nav-item">
+        <a class="mt-1 nav-link" href="./html/myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+          <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- MY PROFILE SECTION -->
+    <section class="myProfile w-50 m-auto mt-5">
+        <div class="myProfileDetail">
+            <div>
+                <img class="profileImg" src="../img/MyProfileImg.png">
+                <div class="profileText m-5">
+                    <form action="" method="">
+                        <input type="text" class="galleryTitle" name="userName" placeholder="Susan’s Slip Gallery"><br>
+                        <input type="text" class="mt-3 w-100" name="userName" placeholder="Hi Susan">
+                        <p class="mt-3">Slip 17 times</p>
+                        <textarea class="mt-3 w-100" name="myDetail" placeholder="It does not matter how slowly you go as long as you do not stop"></textarea>
+                    </form>
+                    <div class="profileBtn mt-4">
+                        <span><img class="profileBtn1" src="../img/Button/Btn_UploadPhoto.png"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="slipTime">
+        <span class="slipTimeText">Slip Timeline</span>
+        <span><img class="w-50" src="../img/Timeline.png"></span>
+    </div>
+    
+    <!-- NAV SECTION -->
+    <section class="GalleryNav w-70 m-3">
+        <ul class="nav mx-5" style="background-color:white;">
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">갤러리</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">팔로잉</a>
+            </li>
+            <li class="nav-item mx-3">
+                <a class="nav-link" href="#">스크랩</a>
+            </li>
+        </ul>
+    </section>
+    
+    <section class="mainGallery w-50 m-auto">
+        <div class="row mt-3">
+            <div class="col item">
+                <img src="../img/Default.png">
+                <div class="item2">
+                    <p class="title3 text-center">새로운 slip 전시하기</p>
+                </div>
+            </div>
+            <div class="col item">
+                <div class="col item">
+                    <img src="../img/userGalleryPhoto1.png">
+                    <div class="row item2">
+                        <img class="col-sm" src="../img/Tag_Com.png">
+                        <p class="col-sm">새 차 뽑았는데 사고침</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col item">
+                <div class="col item">
+                    <img src="../img/userGalleryPhoto2.png">
+                    <div class="row item2">
+                        <img class="col-sm" src="../img/Tag_Com.png">
+                        <p class="col-sm">학교에서 우유 뿜음</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mainGallery w-50 m-auto">
+            <div class="row mt-3">
+                <div class="col item text-center">
+                    <img src="../img/userGalleryPhoto4.png">
+                        <div class="row item2">
+                            <img class="col-sm" src="../img/Tag_Com.png">
+                            <p class="col-sm">내 미래도 저무는 중</p>
+                        </div>
+                </div>
+                <div class="col item">
+                    <div class="col item">
+                        <img src="../img/userGalleryPhoto5.png">
+                        <div class="row item2">
+                            <img class="col-sm" src="../img/Tag_Com.png">
+                            <p class="col-sm">인생 첫 벽화 도전기</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col item">
+                    <div class="col item">
+                        <img src="../img/userGalleryPhoto.png">
+                        <div class="row item2">
+                            <img class="col-sm" src="../img/Tag_Com.png">
+                            <p class="col-sm">내리막길만 있는 인생</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+              
+            </section>
+
+            <section class="page mt-5 mb-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#"><</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                </ul>
+              </section>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="w-75 m-auto bigWrapper">
+          <div class="smallWrapper">
+            <div class="container1">
+              <img src="/./img/Logo.png" alt="." />
+              <p>실패를 전시하는 갤러리</p>
+            </div>
+            <div class="container2">
+              <div class="container3">
+                <a href="javascript:void">이용약관</a>
+                <a href="javascript:void">이용안내</a>
+                <a href="javascript:void">운영정책</a>
+              </div>
+              <p>서울시 노원구 화랑로 621</p>
+            </div>
+          </div>
+          <hr />
+          <a href="javascript:void">
+            <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+          </a>
+        </div>
+      </footer>
+    
+</body>
+
+</html>

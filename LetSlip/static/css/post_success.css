@@ -1,0 +1,190 @@
+/* COMMON */
+/* COMMON */
+body {
+    line-height: 1.4;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* INNER */
+  .inner {
+    width: 900px;
+    margin: 0 auto;
+    /* position: relative; */
+  }
+  
+  /* HEADER */
+  .nav {
+    background-color: #000;
+  }
+  .nav .aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav .inputWrapper {
+    position: relative;
+    width: 420px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    margin: 10px 30px;
+  }
+  .nav .inputWrapper input[type="search"] {
+    width: 80%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    margin-left: 5%;
+  }
+  .nav .inputWrapper .btnSearch {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+  
+  
+    /* MY PAGE MAIN SECTION */
+    .postSuccess p {
+        font-weight: bold;
+      }
+      .writePost .defaultImg {
+        float: left;
+      }
+      .writePost .defaultText {
+        float:right;
+      }
+      .writePost .defaultText input {
+        margin-top: 10px;
+        width: 300px;
+      }
+    
+      .resultBox {
+        margin-top: 20px;
+        padding: 30px;
+        width: 300px;
+        box-shadow: 3px 3px 3px 3px rgb(155, 155, 155);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .sun {
+        clear: both;
+      }
+    .reulstTitle2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .following {
+      display: flex;
+      justify-content: center;
+    }
+   
+    .title3 {
+      background: linear-gradient(90deg, rgb(255, 51, 0), rgb(180, 0, 0), rgb(210, 172, 1), rgb(29, 142, 6), rgb(52, 140, 255), rgb(43, 43, 255), purple);
+      -webkit-background-clip: text;
+      color:transparent;
+      font-weight: bold;
+    }
+  
+     .following-item{
+      margin-left: 100px;
+      margin-right: 100px;
+     }
+  
+     .searchSuccessHeader {
+      color: #000;
+      font-size: 20px;
+      font-weight: 800;
+      margin-top: 35px;
+  
+    }
+    .resultImg{
+      float: left;
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+  
+    .profile{
+      text-align: center;
+      font-weight: bold;
+    }
+    .resultTitle {
+      font-weight: bold;
+      font-size: large;
+      margin-bottom: 10px;
+    }
+  
+    span{
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+  
+    .reulstTitle2 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  
+    .PostBtn {
+        width: 200px;
+        height: auto;
+        border: 1px solid white;
+        background: linear-gradient(150deg, red, orange, yellow, green, rgb(70, 184, 255), rgb(41, 41, 255), purple);
+        font-weight: bold;
+        font-size: large;
+      }
+    
+      .PostBtn:hover{
+        border: 1px solid white;
+        opacity: 0.9;
+      }
+      .Btnn {
+        float: right;
+      }
+    /* FOOTER */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    height: 200px;
+    padding: 30px 0;
+  }
+  .footer .bigWrapper {
+    width: 70%;
+    margin: auto;
+  }
+  .footer .bigWrapper hr {
+    /* width: 100%; */
+    border: 0.5px solid #fff;
+  }
+  .footer .smallWrapper {
+    display: flex;
+    justify-content: space-between;
+    /* margin: auto; */
+  }
+  .footer .container2 a {
+    margin: 10px;
+  }
+  .footer .container2 p {
+    margin-left: 10px;
+  }
+  .footer .container3 {
+    display: flex;
+  }
+  .footer .container3 a {
+    color: #fff;
+  }
+  .footer #instagram {
+    float: right;
+  }
+  
+  
+    

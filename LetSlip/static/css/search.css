@@ -1,0 +1,43 @@
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: black;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.input-group {
+  max-width: 600px;
+  margin: auto;
+}
+
+.input-group input:focus{
+  background-color: #000;
+  color:white;
+}
+
+.input-group {
+  position: relative;
+  width: 70%;
+  height: 40px;
+  background-color: #fff;
+  margin: auto;
+}
+.input-group input[type="search"] {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+  font-weight: bolder;
+}
+
+
+.form-control {
+    border:transparent;
+    border-radius: 0%;
+    border-bottom: 1px solid white;
+    background-color: black;
+}

@@ -1,0 +1,86 @@
+<!-- 로그인(갤러리 열기) 화면 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.101.0" />
+    <title>로그인 페이지</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+     <!-- GOOGLE FONTS -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+       rel="stylesheet"
+     />
+    <link rel="stylesheet" href="../css/signin.css" />
+  </head>
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto">
+      <form action="" method="post">
+        <img class="mb-2" src="../img/Login_logo.png" alt="" />
+
+        <h1 class="h6 mb-5 fw-normal">
+          아이디 또는 비밀번호를 다시 한번 확인해 주세요
+        </h1>
+        <div class="mb-3 mt-3">
+          <label
+            for="userid"
+            class="form-label"
+            style="float: left; font-weight: bold"
+            >아이디</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="userid"
+            name="userid"
+            placeholder="아이디를 입력해주세요"
+          />
+        </div>
+        <div class="mb-3 mt-3">
+          <label
+            for="pwd"
+            class="form-label"
+            style="float: left; font-weight: bold"
+            >비밀번호</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="pwd"
+            name="userpwd"
+            placeholder="비밀번호를 입력해주세요"
+          />
+        </div>
+
+        <button
+          class="LoginBtn btn btn-lg w-100"
+          type="button"
+          onclick="location.href='my_gallery_category.html'"
+        >
+          갤러리 열기
+        </button>
+      </form>
+      <div class="find">
+        <span>
+          <a href="">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> |
+          <a href="../html/join.html">회원가입</a>
+        </span>
+      </div>
+    </main>
+  </body>
+</html>

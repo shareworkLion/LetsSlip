@@ -1,0 +1,152 @@
+/* COMMON */
+body {
+  line-height: 1.4;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* INNER */
+.inner {
+  width: 900px;
+  margin: 0 auto;
+  /* position: relative; */
+}
+
+/* HEADER */
+.nav {
+  background-color: #000;
+}
+.nav .aboutus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.nav .inputWrapper {
+  position: relative;
+  width: 420px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  margin: 10px 30px;
+}
+.nav .inputWrapper input[type="search"] {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  margin-left: 5%;
+}
+.nav .inputWrapper .btnSearch {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+/* MAIN SECTION */
+.mainSection1 {
+  background-color: #000;
+}
+.mainSection1 img {
+  max-width: 100%;
+}
+
+/* AWARDS GALLERY */
+.mainGallery {
+  background-color: #231d1d;
+}
+.mainGallery .main-gallery-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.mainGallery .arrow-wrapper {
+  display: table;
+}
+.mainGallery .btnForward {
+  visibility: hidden;
+}
+.mainGallery .btnForward,
+.mainGallery .btnNext {
+  padding: 0 20px;
+  font-size: 70px;
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+.mainGallery .btnForward:hover,
+.mainGallery .btnNext:hover {
+  cursor: pointer;
+}
+.mainGallery .row {
+  margin: 0;
+}
+.mainGallery .item {
+  width: calc(190px + 10px * 2);
+  margin: 15px 10px;
+}
+.mainGallery .item .contents-img {
+  width: 100%;
+}
+.mainGallery .item .small-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.mainGallery .item .small-wrapper .contents-hash {
+  width: 25%;
+}
+.mainGallery .item .small-wrapper .contents-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.mainGallery .gallery-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.mainGallery .gallery-btn-wrapper button {
+  margin: 0 1px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  height: 200px;
+  padding: 30px 0;
+}
+.footer .bigWrapper {
+  width: 70%;
+  margin: auto;
+}
+.footer .bigWrapper hr {
+  /* width: 100%; */
+  border: 0.5px solid #fff;
+}
+.footer .smallWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+.footer .container2 a {
+  margin: 10px;
+}
+.footer .container2 p {
+  margin-left: 10px;
+}
+.footer .container3 {
+  display: flex;
+}
+.footer .container3 a {
+  color: #fff;
+}
+.footer #instagram {
+  float: right;
+}

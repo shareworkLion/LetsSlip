@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.form-signin {
+  max-width: 400px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+
+.form-control {
+  height: 50px;
+  border: 2px solid;
+  border-image:  linear-gradient(90deg, red, orange, yellow, green, rgb(52, 140, 255), rgb(43, 43, 255), purple);
+  border-image-slice: 1;
+}
+
+.GoGalleryBtn {
+  height: 60px;
+  border: 1px solid white;
+  background: linear-gradient(150deg, red, orange, yellow, green, rgb(70, 184, 255), rgb(41, 41, 255), purple);
+  font-weight: bold;
+}
+
+.GoGalleryBtn:hover{
+  border: 1px solid white;
+  opacity: 0.9;
+}
+
+.SeeAroundBtn {
+    height: 60px;
+    border: 1px solid white;
+    background: 
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(90deg, red, orange, yellow, green, rgb(52, 140, 255), rgb(43, 43, 255), purple) border-box;
+    display: inline-block;
+    padding : 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    color:black;
+  }
+
+  .SeeAroundBtn:hover {
+    background: 
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(90deg, red, orange, yellow, green, rgb(52, 140, 255), rgb(43, 43, 255), purple) border-box;
+    display: inline-block;
+    padding : 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    opacity: 80%;
+  }
+
+  <!--¹öÆ°-->
+  .BtnText {
+    background: linear-gradient(90deg, rgb(255, 51, 0), rgb(180, 0, 0), rgb(210, 172, 1), rgb(29, 142, 6), rgb(52, 140, 255), rgb(43, 43, 255), purple) text;
+    -webkit-background-clip: text;
+    color: black;
+    font-weight: bold;
+  }

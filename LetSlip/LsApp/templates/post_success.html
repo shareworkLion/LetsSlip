@@ -1,0 +1,143 @@
+<!--Slip 작성 완료 화면-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PAGE</title>
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <!-- GOOGLE ICON -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+    <link rel="stylesheet" href="/./css/post_success.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <ul class="nav justify-content-center pt-1 pb-1">
+        <li class="nav-item">
+        <a
+            class="nav-link"
+            id="btnLogo"
+            aria-current="page"
+            href="./index.html"
+        >
+            <img src="../img/Logo.png" alt="Let's Slip" />
+        </a>
+        </li>
+        <li class="nav-item aboutus">
+        <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
+            <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+        </a>
+        </li>
+        <div class="inputWrapper">
+        <input
+            class="form-control me-2"
+            type="search"
+            placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+            aria-label="Search"
+        />
+        <button class="material-icons btnSearch" type="submit">
+            search
+        </button>
+        </div>
+        <li class="nav-item">
+        <a
+            class="mt-1 nav-link"
+            id="btnToMyGalleryRainbow"
+            href="./html/my_gallery_category.html"
+        >
+            <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+        </a>
+        </li>
+        <li class="nav-item">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/login.html">
+            <img src="../img/Button/Btn_openGallery.png" alt="" />
+        </a>
+        </li>
+        <li calss="nav-item">
+        <a class="mt-1 nav-link" href="./html/myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+            <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+        </a>
+        </li>
+    </ul>
+    <!-- MY PAGE MAIN SECTION -->
+    <section class="postSuccess text-center mt-5">
+        <img src="../img/Upload_Success.png">
+        <p class="mt-3 mb-5">Slip 작품이 갤러리에 전시되었습니다</p>
+    </section>
+
+    <section class="PostGallery w-50 m-auto mt-5">
+        <form action="" method="">
+            <div class="writePost">
+                <div class="defaultImg">
+                    <img src="../img/userGalleryPhoto.png">
+                </div>
+                <div class="defaultText">
+                    <div>
+                        <img src="../img/subjectSelect.png">
+                        <p class="mt-2"> 내 미래도 저무는 중 </p>
+                    </div>
+                    <div class="resultBox">
+                        <p>작가 : <span>Hi susan</span></p>
+                        <p>작가 : <span>Hi susan</span></p>
+                        <p>작가 : <span>Hi susan</span></p>
+                    </div>
+ --                </div>
+            </div>
+            <div class="sun"></div>
+            <div class="Btnn mt-5">
+                <button class="PostBtn btn btn-lg mb-5 mx-3" type="button" onclick="location.href='join_success.html'">등록된 Slip 보러가기</button>
+                <button class="PostBtn btn btn-lg mb-5" type="button" onclick="location.href='join_success.html'">또 다른 Slip 전시하기</button>
+            </div>
+            <div class="sun"></div>
+        </form>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="w-75 m-auto bigWrapper">
+            <div class="smallWrapper">
+                <div class="container1">
+                    <img src="/./img/Logo.png" alt="." />
+                    <p>실패를 전시하는 갤러리</p>
+                </div>
+                <div class="container2">
+                    <div class="container3">
+                        <a href="javascript:void">이용약관</a>
+                        <a href="javascript:void">이용안내</a>
+                        <a href="javascript:void">운영정책</a>
+                    </div>
+                    <p>서울시 노원구 화랑로 621</p>
+                </div>
+            </div>
+            <hr />
+            <a href="javascript:void">
+                <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+            </a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
