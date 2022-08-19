@@ -1,4 +1,5 @@
 <!-- 마이 페이지_1. 활동할 이름 변경 -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,8 +40,8 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
 
-    <link rel="stylesheet" href="/./css/myPage2.css" />
-    <script defer src="../js/test.js"></script>
+    <link rel="stylesheet" href="{% static 'css/myPage2.css' %}" />
+    <script defer src="{% static 'js/test.js' %}"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -52,12 +53,12 @@
           aria-current="page"
           href="{% url 'index' %}"
         >
-          <img src="/LetSlip/static/img/Logo.png" alt="Let's Slip" />
+          <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
         <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
-          <img src="/LetSlip/static/img/Button/Btn_toAboutUs.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
@@ -82,7 +83,7 @@
       </li>
       <li class="nav-item">
         <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
-          <img src="/LetSlip/static/img/Button/Btn_openGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
@@ -124,7 +125,7 @@
               <p class="msg">더 독특한 이름을 떠올려주세요</p>
             </div>
             <button type="submit" class="changeName" onclick="btnChangeName()">
-              <img src="/LetSlip/static/img/Button/Btn_changeName.png" alt="" />
+              <img src="{% static 'img/Button/Btn_changeName.png' %}" alt="" />
             </button>
           </form>
         </div>
@@ -136,7 +137,7 @@
       <div class="w-75 m-auto bigWrapper">
         <div class="smallWrapper">
           <div class="container1">
-            <img src="/LetSlip/static/img/Logo.png" alt="." />
+            <img src="{% static 'img/Logo.png'%}" alt="." />
             <p>실패를 전시하는 갤러리</p>
           </div>
           <div class="container2">
@@ -150,7 +151,7 @@
         </div>
         <hr />
         <a href="javascript:void">
-          <img id="instagram" src="/LetSlip/static/img/Button/Btn_Insta.png" alt="" />
+          <img id="instagram" src="{% static 'img/Button/Btn_Insta.png'%}" alt="" />
         </a>
       </div>
     </footer>

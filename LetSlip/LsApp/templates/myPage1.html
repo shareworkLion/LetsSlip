@@ -1,4 +1,5 @@
 <!-- 마이 페이지 화면 -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +41,7 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
 
-    <link rel="stylesheet" href="/./css/myPage1.css" />
+    <link rel="stylesheet" href="{% static 'css/myPage1.css' %}" />
     <script defer src="../js/test.js"></script>
   </head>
   <body>
@@ -51,14 +52,14 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="../index.html"
+          href="{% url 'index' %}"
         >
-          <img src="../img/Logo.png" alt="Let's Slip" />
+          <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
         <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
-          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
@@ -78,12 +79,12 @@
           id="btnToMyGalleryRainbow"
           href="{% url 'my_gallery_category' %}"
         >
-          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
         </a>
       </li>
       <li class="nav-item">
         <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
-          <img src="../img/Button/Btn_openGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
@@ -131,7 +132,7 @@
       <div class="w-75 m-auto bigWrapper">
         <div class="smallWrapper">
           <div class="container1">
-            <img src="/./img/Logo.png" alt="." />
+            <img src="{% static 'img/Logo.png' %}" alt="." />
             <p>실패를 전시하는 갤러리</p>
           </div>
           <div class="container2">
@@ -145,7 +146,7 @@
         </div>
         <hr />
         <a href="javascript:void">
-          <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+          <img id="instagram" src="{% static 'img/Button/Btn_Insta.png' %}" alt="" />
         </a>
       </div>
     </footer>

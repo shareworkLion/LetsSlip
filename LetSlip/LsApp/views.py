@@ -200,7 +200,7 @@ def my_gallery_category3(request):
     return render(request, 'my_gallery_category3.html')
 
 def my_gallery_category1_2(request):
-    return render(request, 'my_gallery_category1_2')
+    return render(request, 'my_gallery_category1_2.html')
 
 def otherUserSlip(request):
     return render(request, 'otherUserSlip.html')
@@ -222,3 +222,9 @@ def myPage4(request):
 
 def post(request):
     return render(request, 'post.html')
+
+def mySlip(request):
+    return render(request, 'mySlip.html')
+
+def post_success(request):
+    return render(request, 'post_success.html')
