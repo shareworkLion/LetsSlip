@@ -1,3 +1,4 @@
+from time import time
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post, Comment, Category, CommentReply, Profile
 from .forms import PostForm, CommentForm, CommentReplyForm
@@ -13,6 +14,7 @@ from django.http import HttpResponse
 
 
 def home(request):
+    # count_content_view(request=True, pk=id)
     if request.method == "POST":
         userid = request.POST['userid']
         pwd = request.POST['password']
@@ -179,7 +181,7 @@ def timesave(request):
         timesave.save()
         return HttpResponse(content_type='appliction/json')
 
-def count_content_view(request, today):
+def count_content_view(request, pk):
     today = DateFormat(datetime.now()).format('Ymd')
     content = Post.objects.order_by('created')
     content_count = content.exclude(deleted = True).filter(date = today).count()
