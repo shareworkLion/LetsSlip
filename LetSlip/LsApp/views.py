@@ -59,7 +59,7 @@ def gallery(request):
     return render(request, 'my_gallery_category.html',{'post_list':post_list, 'posts': posts})
 
 def gallery_success(request):
-    return render(request, 'join_success.html')
+    return render(request, 'post_success.html')
 
 # 새 갤러리 생성
 @login_required(login_url='login')
