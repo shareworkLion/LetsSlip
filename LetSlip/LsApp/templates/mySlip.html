@@ -1,4 +1,5 @@
 <!-- 자기 슬립 감상화면_1. Slip만 작성한 경우/2.성공기도 작성한 경우-->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,8 +41,8 @@
     />
 
     <title>My Slip Page</title>
-    <link rel="stylesheet" href="/./css/mySlip.css" />
-    <script src="../js/test.js"></script>
+    <link rel="stylesheet" href="{% static 'css/mySlip.css' %}" />
+    <script src="{% static 'js/test.js' %}"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -51,14 +52,14 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="../index.html"
+          href="{% url 'index' %}"
         >
-          <img src="../img/Logo.png" alt="Let's Slip" />
+          <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
         <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
-          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
@@ -78,12 +79,12 @@
           id="btnToMyGalleryRainbow"
           href="{% url 'my_gallery_category' %}"
         >
-          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
         </a>
       </li>
       <li class="nav-item">
         <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
-          <img src="../img/Button/Btn_openGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
@@ -104,10 +105,10 @@
       <section class="m-5 profile-container">
         <div class="big-wrapper">
           <div class="img-wrapper">
-            <img id="myProfileImg" src="../img/Main_exGalleryImg.png" alt="" />
+            <img id="myProfileImg" src="{% static 'img/Main_exGalleryImg.png' %}" alt="" />
           </div>
           <div class="small-wrapper">
-            <img src="../img/Main_Hash.png" alt="" />
+            <img src="{% static 'img/Main_Hash.png' %}" alt="" />
             <div class="mt-1 mb-3 mySlipTitle">내 미래도 저무는 중</div>
             <div class="p-3 table-box">
               <table class="ml-1 mr-1 table">
@@ -134,11 +135,11 @@
       <!-- 아이콘 - 수정/업로드 -->
       <div class="icon-wrapper">
         <button id="btnModify" onclick="location.href='{% url 'post' %}'">
-          <img src="../img/Button/Button_reverse/Btn_Modify_Rev.png" alt="" />
+          <img src="{% static 'img/Button/Button_reverse/Btn_Modify_Rev.png' %}" alt="" />
         </button>
         <button id="btnUploadPhoto">
           <img
-            src="../img/Button/Button_reverse/Btn_UploadPhoto_Rev.png"
+            src="{% static 'img/Button/Button_reverse/Btn_UploadPhoto_Rev.png' %}"
             alt=""
           />
         </button>
@@ -248,10 +249,10 @@
       <!-- 아이콘 - 좋아요, 코멘트 -->
       <div class="icon-wrapper">
         <button id="btnComments">
-          <img src="../img/Button/Btn_CommentsSmall.png" alt="" />
+          <img src="{% static 'img/Button/Btn_CommentsSmall.png' %}" alt="" />
         </button>
         <button id="btnUploadPhoto">
-          <img src="../img/Button/Btn_Likes.png" alt="" />
+          <img src="{% static 'img/Button/Btn_Likes.png' %}" alt="" />
         </button>
       </div>
     </div>
