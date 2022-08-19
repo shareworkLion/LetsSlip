@@ -218,3 +218,8 @@ def slipComments(request):
 def myPage1(request):
     return render(request, 'myPage1.html')
 
+def myPage2(request):
+    return render(request, 'myPage2.html')
+
+def myPage3(request):
+    return render(request, 'myPage3.html')
