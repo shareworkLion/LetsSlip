@@ -1,3 +1,4 @@
+{% load static %}
 <!--  메인 화면 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -41,8 +42,8 @@
 
     <title>MAIN PAGE</title>
 
-    <link rel="stylesheet" href="./css/main.css" />
-    <script defer src="./js/test.js"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <script defer src="{% static 'js/test.js' %}"></script>
 
   </head>
   <body>
@@ -53,51 +54,52 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="./index.html"
+          href="{% url 'home' %}"
         >
-          <img src="../img/Logo.png" alt="Let's Slip" />
+          <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
-        <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
-          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+        <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
+          <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
-          aria-label="Search"
-        />
-        <button class="material-icons btnSearch" type="submit">
-          search
-        </button>
+        <form action="{% url 'search' %}" method="POST" class="form-control me-2">
+            {% csrf_token %}
+            <input
+              class="form-control me-2"
+              type="search"
+              name="searched"
+              value="{{searched}}"
+              id="search-box"
+              placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+              aria-label="Search"
+              onkeypress="javascript:if(event.keyCode==13) {btnSearchClicked()}"
+            />
+            <button class="material-icons btnSearch" type="submit" id="search-box" onclick="wow()">
+              search
+            </button>
+          </form>
       </div>
       <li class="nav-item">
         <a
           class="mt-1 nav-link"
           id="btnToMyGalleryRainbow"
-          href="./html/my_gallery_category.html"
+          href="{% url 'gallery' %}"
         >
-          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
         </a>
       </li>
       <li class="nav-item">
-        <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
-          <img src="../img/Button/Btn_openGallery.png" alt="" />
-        </a>
-      </li>
-      <li calss="nav-item">
-        <a class="mt-1 nav-link" href="./html/myPage1.html" style="display: flex; justify-content: center; align-items: center;">
-          <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/login.html">
+          <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
     </ul>
-
     <!-- MAIN SECTION -->
     <section class="mainSection1">
-      <img src="../img/Main_Title.png" alt="Let's Slip" />
+      <img src="{% static 'img/Main_Title.png' %}" alt="Let's Slip" />
       <div class="inner">
         <div class="row mainSection1-container">
           <div class="col number">9327</div>
@@ -120,28 +122,28 @@
         <div class="img-wrapper">
           <div class="mt-4 row">
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
             </div>
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
             </div>
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
@@ -149,28 +151,28 @@
           </div>
           <div class="mb-4 row">
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
             </div>
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
             </div>
             <div class="col item">
-              <a href="{% url 'otherUserSlip' %}">
+              <a href="./html/slipComments.html">
                 <img
                   class="main-contents-img"
-                  src="./img/Main_exGalleryImg.png"
+                  src="{% static 'img/Main_exGalleryImg.png' %}"
                   alt=""
                 />
               </a>
@@ -186,13 +188,13 @@
       <div class="mb-4 gallery-btn-wrapper">
         <!-- 페이지 인덱스에 따라 pagination 이미지 수정 -> js로 처리 -->
         <button class="gallery-page-1">
-          <img src="../img/Button/Btn_GalleryPaginationActice.png" alt="" />
+          <img src="{% static 'img/Button/Btn_GalleryPaginationActice.png' %}" alt="" />
         </button>
         <button class="gallery-page-2">
-          <img src="../img/Button/Btn_GalleryPaginationDisabled.png" alt="" />
+          <img src="{% static 'img/Button/Btn_GalleryPaginationDisabled.png' %}" alt="" />
         </button>
         <button class="gallery-page-3">
-          <img src="../img/Button/Btn_GalleryPaginationDisabled.png" alt="" />
+          <img src="{% static 'img/Button/Btn_GalleryPaginationDisabled.png' %}" alt="" />
         </button>
       </div>
     </section>
@@ -208,43 +210,42 @@
           <div class="container2">
             <img
               class="mainKeywordBtn1"
-              src="./img/Hash/Hash_Exam.png"
+              src="{% static 'img/Hash/Hash_Exam.png' %}"
               alt=""
             />
-            <img class="mainKeywordBtn2" src="./img/Hash/Hash_Job.png" alt="" />
+            <img class="mainKeywordBtn2" src="{% static 'img/Hash/Hash_Job.png' %}" alt="" />
             <img
               class="mainKeywordBtn3"
-              src="./img/Hash/Hash_Study.png"
+              src="{% static 'img/Hash/Hash_Study.png' %}"
               alt=""
             />
           </div>
         </div>
       </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="w-75 m-auto bigWrapper">
-        <div class="smallWrapper">
-          <div class="container1">
-            <img src="/./img/Logo.png" alt="." />
-            <p>실패를 전시하는 갤러리</p>
-          </div>
-          <div class="container2">
-            <div class="container3">
-              <a href="javascript:void">이용약관</a>
-              <a href="javascript:void">이용안내</a>
-              <a href="javascript:void">운영정책</a>
-            </div>
-            <p>서울시 노원구 화랑로 621</p>
-          </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="w-75 m-auto bigWrapper">
+      <div class="smallWrapper">
+        <div class="container1">
+          <img src="{% static 'img/Logo.png' %}" alt="." />
+          <p>실패를 전시하는 갤러리</p>
         </div>
-        <hr />
-        <a href="javascript:void">
-          <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
-        </a>
+        <div class="container2">
+          <div class="container3">
+            <a href="javascript:void">이용약관</a>
+            <a href="javascript:void">이용안내</a>
+            <a href="javascript:void">운영정책</a>
+          </div>
+          <p>서울시 노원구 화랑로 621</p>
+        </div>
       </div>
-    </footer>
+      <hr />
+      <a href="javascript:void">
+        <img id="instagram" src="{% static 'img/Button/Btn_Insta.png' %}" alt="" />
+      </a>
+    </div>
+  </footer>
 
   </body>
 </html>

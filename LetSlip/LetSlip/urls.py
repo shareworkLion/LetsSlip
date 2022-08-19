@@ -13,8 +13,10 @@ urlpatterns = [
     # LsApp
     path('home/', views.home, name='home'), # 유저 페이지
     path('search/', views.search, name='search'),
-    path('post_new', views.post_new, name='post_new'),
-    path('post_detail/<int:post_id>', views.post_detail, name='post_detail'),
+    path('board/', views.gallery, name='gallery'),
+    path('board/write', views.post_new, name='post_new'),
+    path('board/write/success', views.gallery_success, name='gallery_success'),
+    path('board/detail/<int:post_id>', views.post_detail, name='post_detail'),
     path('comment_new/<int:post_id>', views.comment_new, name='comment_new'),
     path('commentreply/<int:comment_id>', views.commentreply, name='commentreply'),
     path('post_like_toggle/<int:post_id>', views.post_like_toggle, name='post_like_toggle'),
