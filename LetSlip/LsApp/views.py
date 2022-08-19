@@ -11,6 +11,8 @@ from django.utils.dateformat import DateFormat
 from django.shortcuts import render
 from django.http import HttpResponse
 
+def index(request):
+    return render(request, 'index.html')
 
 def home(request):
     if request.method == "POST":
@@ -189,3 +191,28 @@ def count_content_view(request, today):
     }
     
     return render(request, context=context)
+
+def aboutUs(request):
+    return render(request, 'aboutUs.html')
+
+def my_gallery_category(request):
+    return render(request, 'my_gallery_category.html')
+
+def my_gallery_category2(request):
+    return render(request, 'my_gallery_category2.html')
+
+def my_gallery_category3(request):
+    return render(request, 'my_gallery_category3.html')
+
+def my_gallery_category1_2(request):
+    return render(request, 'my_gallery_category1_2')
+
+def otherUserSlip(request):
+    return render(request, 'otherUserSlip.html')
+
+def slipComments(request):
+    return render(request, 'slipComments.html')
+
+def myPage1(request):
+    return render(request, 'myPage1.html')
+
