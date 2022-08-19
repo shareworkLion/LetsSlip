@@ -165,3 +165,23 @@ def post_like_toggle(request, post_id):
 #             post.likes.add(request.user)
 #         return redirect('home', likes_id)
 #     return redirect('login')
+
+# 오늘 올라온 게시물의 수
+def timesave(request):
+    if request.method == 'POST':
+        timesave = timesave()
+        timesave.save_date = request.POST.get('time')
+        timesave.date = DateFormat(datetime.now()).format('Ymd')
+        timesave.save()
+        return HTTPResponse(content_type='appliction/json')
+
+def count_content_view(request, today):
+    today = DateFormat(datetime.now()).format('Ymd')
+    content = Post.objects.order_by('created')
+    content_count = content.exclude(deleted = True).filter(date = today).count()
+    context = {
+        'newcontent' : content,
+        'content_count' : content_count,
+    }
+    
+    return render(request, context=context)
