@@ -68,9 +68,7 @@
           placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
           aria-label="Search"
         />
-        <button class="material-icons btnSearch" type="submit">
-          search
-        </button>
+        <button class="material-icons btnSearch" type="submit">search</button>
       </div>
       <li class="nav-item">
         <a
@@ -78,7 +76,7 @@
           id="btnToMyGalleryRainbow"
           href="{% url 'my_gallery_category' %}"
         >
-          <img src="/LetSlip/static/img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
         </a>
       </li>
       <li class="nav-item">
@@ -86,9 +84,17 @@
           <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
-      <li calss="nav-item" style="visibility: hidden;">
-        <a class="mt-1 nav-link" href="{% url 'myPage1' %}" style="display: flex; justify-content: center; align-items: center;">
-          <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
+      <li calss="nav-item" style="visibility: hidden">
+        <a
+          class="mt-1 nav-link"
+          href="{% url 'myPage1' %}"
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <span
+            class="material-icons"
+            style="color: #fff; font-size: 25px; margin-top: 6px"
+            >settings</span
+          >
         </a>
       </li>
     </ul>
@@ -137,7 +143,7 @@
       <div class="w-75 m-auto bigWrapper">
         <div class="smallWrapper">
           <div class="container1">
-            <img src="{% static 'img/Logo.png'%}" alt="." />
+            <img src="{% static 'img/Logo.png' %}" alt="." />
             <p>실패를 전시하는 갤러리</p>
           </div>
           <div class="container2">
@@ -151,7 +157,7 @@
         </div>
         <hr />
         <a href="javascript:void">
-          <img id="instagram" src="{% static 'img/Button/Btn_Insta.png'%}" alt="" />
+          <img id="instagram" src="{% static 'img/Button/Btn_Insta.png' %}" alt="" />
         </a>
       </div>
     </footer>

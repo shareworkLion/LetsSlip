@@ -42,7 +42,7 @@
     />
 
     <link rel="stylesheet" href="{% static 'css/myPage1.css' %}" />
-    <script defer src="../js/test.js"></script>
+    <script defer src="{% static 'js/test.js' %}"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -104,7 +104,7 @@
           <a class="mypage-title" href="">내 정보 관리</a>
           <div class="container">
             <a class="mypageChangeName" href="{% url 'myPage2' %}">활동 이름 변경</a>
-            <a class="mypageChangeMBTI" href="{% url 'myPage3' %}">MBTI 변경</a>
+            <a class="mypageChangeMBTI" href="{% url 'myPage3' %}l">MBTI 변경</a>
             <a class="mypageChangePw" href="{% url 'myPage4' %}">비밀번호 변경</a>
           </div>
         </div>

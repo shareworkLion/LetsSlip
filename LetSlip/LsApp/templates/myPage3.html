@@ -41,7 +41,7 @@
     />
 
     <link rel="stylesheet" href="{% static 'css/myPage3.css' %}" />
-    <script defer src="{% static 'js/test.js' %}"></script>
+    <script defer src="../js/test.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -51,7 +51,7 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="{% url 'index' %}"
+          href="{% utl 'index' %}"
         >
           <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
@@ -96,7 +96,7 @@
     <!-- Change MBTI Section -->
     <div class="inner">
       <!-- 이전 페이지로 -->
-      <button class="m-4 backBtn" onclick="location.href='{% url 'myPage1' %}'">
+      <button class="m-4 backBtn" onclick="location.href='myPage1.html'">
         <span class="material-icons">arrow_back</span>
         <div>이전 페이지으로</div>
       </button>
