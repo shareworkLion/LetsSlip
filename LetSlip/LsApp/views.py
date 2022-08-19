@@ -223,3 +223,6 @@ def myPage2(request):
 
 def myPage3(request):
     return render(request, 'myPage3.html')
+
+def myPage4(request):
+    return render(request, 'myPage4.html')
