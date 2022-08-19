@@ -219,3 +219,6 @@ def myPage3(request):
 
 def myPage4(request):
     return render(request, 'myPage4.html')
+
+def post(request):
+    return render(request, 'post.html')

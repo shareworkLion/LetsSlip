@@ -31,6 +31,7 @@ urlpatterns = [
     path('myPage2/', views.myPage2, name='myPage2'),
     path('myPage3/', views.myPage3, name='myPage3'),
     path('myPage4/', views.myPage4, name='myPage4'),
+    path('post/', views.post, name='post'),
 
     # accounts
     path('login/', accounts_views.login, name='login'),
