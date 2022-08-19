@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from .models import Member
+from datetime import datetime 
+from django.utils.dateformat import DateFormat
+from django.shortcuts import render
+from django.http import HttpResponse
 
 
 def home(request):
@@ -173,7 +177,7 @@ def timesave(request):
         timesave.save_date = request.POST.get('time')
         timesave.date = DateFormat(datetime.now()).format('Ymd')
         timesave.save()
-        return HTTPResponse(content_type='appliction/json')
+        return HttpResponse(content_type='appliction/json')
 
 def count_content_view(request, today):
     today = DateFormat(datetime.now()).format('Ymd')
