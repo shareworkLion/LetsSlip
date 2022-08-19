@@ -25,7 +25,7 @@
   <!-- HEADER -->
   <ul class="nav justify-content-center pt-1 pb-1">
     <li class="nav-item">
-      <a class="nav-link" id="btnLogo" aria-current="page" href="../index.html">
+      <a class="nav-link" id="btnLogo" aria-current="page" href="{% url 'index' %}">
         <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
       </a>
     </li>
@@ -44,12 +44,12 @@
       <button class="material-icons btnSearch" type="submit">search</button>
     </div>
     <li class="nav-item">
-      <a class="mt-1 nav-link" id="btnToMyGalleryRainbow" href="#">
+      <a class="mt-1 nav-link" id="btnToMyGalleryRainbow" href="{% url 'my_gallery_category' %}">
         <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
       </a>
     </li>
     <li class="nav-item">
-      <a class="mt-1 nav-link" id="btnOpenGallery" href="#">
+      <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
         <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
       </a>
     </li>

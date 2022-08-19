@@ -38,21 +38,6 @@
 {% endfor %}
 </tbody>
 
-<!-- 오류 발생
-<form method="POST" action="{% url 'post_like_toggle' post.like_count %}">
-    {% csrf_token %}
-    <p>응원 수 : {{post.like_count}}</p>
-    
-        {% if post in profile.like_post.all %}
-            취소
-        {% else %}
-            좋아요
-        {% endif %}
-    </a>
-</form>
--->
-<!--<a href="{% url 'post_like_toggle' post.like_count %}">-->
-
 <!-- 이전페이지 -->
 {% if posts.has_previous %}
 <a href = "?page={{posts.previous_page_number}}">이전</a>
@@ -76,14 +61,3 @@
 <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
 {% endif %}
 
-<!-- 게시글 응원
-<div>
-    <form action="{% url 'likes' likes_user %}" method='POST'>
-        {% csrf_token %}
-        {% if user in post.like_users.all %}
-            <input type="submit" value='응원해요 취소'>
-        {% else %}
-            <input type="submit" value='응원해요'>
-        {% endif %}
-    </form>
-</div>>-->
