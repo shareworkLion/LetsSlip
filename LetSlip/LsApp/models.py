@@ -9,7 +9,8 @@ from django.utils import timezone
 class Board(models.Model):
     b_no = models.AutoField(primary_key=True)
     b_name = models.CharField(max_length=255)
-    b_img = models.CharField(max_length=255, blank=True, null=True)
+    # b_img = models.CharField(max_length=255, blank=True, null=True)
+    b_img = models.ImageField(blank=True, null=True, upload_to='post_photo')
     regdate = models.DateTimeField()
     b_intro1 = models.CharField(max_length=255)
     b_intro2 = models.CharField(max_length=255)
@@ -158,3 +159,7 @@ class CommentReply(models.Model):
 #     class Meta:
 #         unique_together = (("post", "user"),)
 #         ordering = ['-create_dt']
+
+# 오늘 게시된 게시물 
+class Count(models.Model):
+    counts = models.PositiveIntegerField(verbose_name='오늘 올라온 실수들', null=True)

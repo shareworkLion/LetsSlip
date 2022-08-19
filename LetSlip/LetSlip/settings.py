@@ -1,15 +1,16 @@
 from pathlib import Path
-from .my_settings import mySECRET_KEY, myDATABASES
+import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = mySECRET_KEY
+SECRET_KEY = 'django-insecure-l22buoa!=vhp01h)%@57$9he^mn&v#q*0yu3r*55of0!uzcfy$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -28,7 +29,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'LsApp',
     'accounts',
-    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -64,8 +64,18 @@ WSGI_APPLICATION = 'LetSlip.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+pymysql.install_as_MySQLdb()
 
-DATABASES = myDATABASES
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'letsslipdb',
+        'USER': 'letsslip',
+        'PASSWORD': 'LetsSlip1234!',
+        'HOST': '127.0.0.1',
+        'PORT': '3306'
+    }
+}
 
 
 # Password validation
@@ -90,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Seoul'
 
@@ -104,10 +114,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 경로 작성(최상위)
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
 ]
-
 import os
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -117,5 +127,3 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-#AUTH_USER_MODEL = 'accounts.FollowUser'

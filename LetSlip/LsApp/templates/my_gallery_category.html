@@ -1,3 +1,4 @@
+{% load static %}
 <!--유저 갤러리 화면 1_1 갤러리 카테고리-->
 <!DOCTYPE html>
 <html lang="en">
@@ -28,73 +29,75 @@
     <!-- RESET CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
-    <link rel="stylesheet" href="/./css/my_profile.css">
+    <link rel="stylesheet" href="{% static 'css/my_profile.css' %}">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <ul class="nav justify-content-center pt-1 pb-1">
-    <li class="nav-item">
-      <a
-        class="nav-link"
-        id="btnLogo"
-        aria-current="page"
-        href="./index.html"
-      >
-        <img src="../img/Logo.png" alt="Let's Slip" />
-      </a>
-    </li>
-    <li class="nav-item aboutus">
-      <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
-        <img src="../img/Button/Btn_toAboutUs.png" alt="" />
-      </a>
-    </li>
-    <div class="inputWrapper">
-      <input
-        class="form-control me-2"
-        type="search"
-        placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
-        aria-label="Search"
-      />
-      <button class="material-icons btnSearch" type="submit">
-        search
-      </button>
-    </div>
-    <li class="nav-item">
-      <a
-        class="mt-1 nav-link"
-        id="btnToMyGalleryRainbow"
-        href="./html/my_gallery_category.html"
-      >
-        <img src="../img/Button/Btn_toMyGallery.png" alt="" />
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/login.html">
-        <img src="../img/Button/Btn_openGallery.png" alt="" />
-      </a>
-    </li>
-    <li calss="nav-item">
-      <a class="mt-1 nav-link" href="./html/myPage1.html" style="display: flex; justify-content: center; align-items: center;">
-        <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
-      </a>
-    </li>
-  </ul>
+    <!-- HEADER -->
+    <ul class="nav justify-content-center pt-1 pb-1">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="btnLogo"
+            aria-current="page"
+            href="{% url 'home' %}"
+          >
+            <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
+          </a>
+        </li>
+        <li class="nav-item aboutus">
+          <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
+            <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
+          </a>
+        </li>
+        <div class="inputWrapper">
+          <form action="{% url 'search' %}" method="POST" class="form-control me-2">
+          {% csrf_token %}
+          <input
+            class="form-control me-2"
+            type="search"
+            name="searched"
+            value="{{searched}}"
+            id="search-box"
+            placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+            aria-label="Search"
+            onkeypress="javascript:if(event.keyCode==13) {btnSearchClicked()}"
+          />
+          <button class="material-icons btnSearch" type="submit" id="search-box" onclick="wow()">
+            search
+          </button>
+        </form>
+        </div>
+        <li class="nav-item">
+          <a
+            class="mt-1 nav-link"
+            id="btnToMyGalleryRainbow"
+            href="{% url 'slipComments' %}"
+          >
+            <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'myPage1' %}">
+            <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
+          </a>
+        </li>
+      </ul>
 
     <!-- MY PROFILE SECTION -->
     <section class="myProfile w-50 m-auto mt-5">
         <div class="myProfileDetail">
             <div>
-                <img class="profileImg" src="../img/MyProfileImg.png">
+                <img class="profileImg" src="{% static 'img/MyProfileImg.png' %}">
                 <div class="profileText m-5">
                     <p class="galleryTitle">Susan’s Slip Gallery</p>
                     <p class="mt-3">Hi Susan</p>
-                    <p class="mt-3">Slip 17 times</p>
+                    <p class="mt-3">Slip {{ post_list.count }} times</p>
                     <p class="mt-4">“It does not matter how slowly you<br>
                         go as long as you do not stop”</p>
                     <div class="profileBtn mt-4">
-                        <span><img class="profileBtn1" src="../img/Button/Btn_UploadPhoto.png"></span>
-                        <span><img class="profileBtn1" src="../img/Button/Btn_Modify.png"></span>
+                        <span><img class="profileBtn1" src="{% static 'img/Button/Btn_UploadPhoto.png' %}"></span>
+                        <span><img class="profileBtn1" src="{% static 'img/Button/Btn_Modify.png' %}"></span>
                     </div>
                 </div>
             </div>
@@ -103,7 +106,7 @@
 
     <div class="slipTime">
         <span class="slipTimeText">Slip Timeline</span>
-        <span><img class="w-50" src="../img/Timeline.png"></span>
+        <span><img class="w-50" src="{% static 'img/Timeline.png' %}"></span>
     </div>
     
     <!-- NAV SECTION -->
@@ -124,71 +127,60 @@
     <section class="mainGallery w-50 m-auto">
         <div class="row mt-3">
             <div class="col item">
-                <img src="../img/Default.png">
+              <a href="{% url 'post_new' %}"> <!-- 새 갤러리 작성 -->
+                <img src="{% static 'img/Default.png' %}">
+              </a>
                 <div class="item2">
                     <p class="title3 text-center">새로운 slip 전시하기</p>
                 </div>
             </div>
+            {% for post in posts %}
             <div class="col item">
-                <div class="col item">
-                    <img src="../img/userGalleryPhoto1.png">
-                    <div class="row item2">
-                        <img class="col-sm" src="../img/Tag_Com.png">
-                        <p class="col-sm">새 차 뽑았는데 사고침</p>
-                    </div>
+              <div class="col item"> <!-- 본인 갤러리 글 -->
+              {% if post.b_img %}
+              <img src = "{{ post.b_img.url }}" alt="" height="200">
+              {% endif %}
+              <div class="row item2">
+                
+                <img class="col-sm" src="{% static 'img/Tag_Com.png' %}">
+                <div class="item2">
+                  <p class="title3 text-center">
+                    <a href = "{% url 'post_detail' post.b_no %}" class="title3 text-center">
+                      {{ post.b_name }}
+                    </a>
+                  </p>
                 </div>
-            </div>
-            <div class="col item">
-                <div class="col item">
-                    <img src="../img/userGalleryPhoto2.png">
-                    <div class="row item2">
-                        <img class="col-sm" src="../img/Tag_Com.png">
-                        <p class="col-sm">학교에서 우유 뿜음</p>
-                    </div>
-                </div>
+                {% comment %} <p class="col-sm">              
+                    {{ post.b_name }}
+                </p> {% endcomment %}
+              </div>
             </div>
           </div>
+          {% endfor %}
         </section>
-
-        <section class="mainGallery w-50 m-auto">
-            <div class="row mt-3">
-                <div class="col item text-center">
-                    <img src="../img/userGalleryPhoto4.png">
-                        <div class="row item2">
-                            <img class="col-sm" src="../img/Tag_Com.png">
-                            <p class="col-sm">내 미래도 저무는 중</p>
-                        </div>
-                </div>
-                <div class="col item">
-                    <div class="col item">
-                        <img src="../img/userGalleryPhoto5.png">
-                        <div class="row item2">
-                            <img class="col-sm" src="../img/Tag_Com.png">
-                            <p class="col-sm">인생 첫 벽화 도전기</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col item">
-                    <div class="col item">
-                        <img src="../img/userGalleryPhoto.png">
-                        <div class="row item2">
-                            <img class="col-sm" src="../img/Tag_Com.png">
-                            <p class="col-sm">내리막길만 있는 인생</p>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              
-              
-            </section>
 
             <section class="page mt-5 mb-5">
                 <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#"><</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">></a></li>
+                    <!-- 이전 페이지 -->
+                {% if posts.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{posts.previous_page_number}}"><</a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="#"><</a></li>
+                {% endif %}
+                <!-- 페이지리스트 -->
+                {% for page_number in posts.paginator.page_range %}
+                  {% if page_number == posts.number %}
+                  <li class="page-item"><a class="page-link" href="?&page={{ page_number }}">{{ page_number }}</a></li>
+                  {% else %}
+                  <li class="page-item"><a class="page-link" href="?&page={{ page_number }}">{{ page_number }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                <!-- 다음 페이지 -->
+                {% if posts.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">></a></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="#">></a></li>
+                {% endif %}
                 </ul>
               </section>
     </section>
@@ -197,7 +189,7 @@
         <div class="w-75 m-auto bigWrapper">
           <div class="smallWrapper">
             <div class="container1">
-              <img src="/./img/Logo.png" alt="." />
+              <img src="{% static 'img/Logo.png' %}" alt="." />
               <p>실패를 전시하는 갤러리</p>
             </div>
             <div class="container2">
@@ -211,7 +203,7 @@
           </div>
           <hr />
           <a href="javascript:void">
-            <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+            <img id="instagram" src="{% static 'img/Button/Btn_Insta.png' %}" alt="" />
           </a>
         </div>
       </footer>
