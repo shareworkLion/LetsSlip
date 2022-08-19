@@ -1,5 +1,6 @@
 from pathlib import Path
-import pymysql
+# from .my_settings import SECRET_KEY, DATABASES
+# import pymysql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,7 +65,7 @@ WSGI_APPLICATION = 'LetSlip.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-pymysql.install_as_MySQLdb()
+# pymysql.install_as_MySQLdb()
 
 DATABASES = {
     'default': {

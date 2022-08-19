@@ -158,3 +158,7 @@ class CommentReply(models.Model):
 #     class Meta:
 #         unique_together = (("post", "user"),)
 #         ordering = ['-create_dt']
+
+# 오늘 게시된 게시물 
+class Count(models.Model):
+    counts = models.PositiveIntegerField(verbose_name='오늘 올라온 실수들', null=True)
