@@ -72,13 +72,13 @@
           <a
             class="mt-1 nav-link"
             id="btnToMyGalleryRainbow"
-            href="./html/slipComments.html"
+            href="{% url 'slipComments' %}"
           >
             <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
           </a>
         </li>
         <li class="nav-item">
-          <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/myPage1.html">
+          <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'myPage1' %}">
             <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
           </a>
         </li>

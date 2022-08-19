@@ -57,7 +57,7 @@
         </a>
       </li>
       <li class="nav-item aboutus">
-        <a class="nav-link" id="toAboutUs" href="./aboutUs.html">
+        <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
           <img src="../img/Button/Btn_toAboutUs.png" alt="" />
         </a>
       </li>
@@ -76,18 +76,18 @@
         <a
           class="mt-1 nav-link"
           id="btnToMyGalleryRainbow"
-          href="./my_gallery_category.html"
+          href="{% url 'my_gallery_category' %}"
         >
           <img src="../img/Button/Btn_toMyGallery.png" alt="" />
         </a>
       </li>
       <li class="nav-item">
-        <a class="mt-1 nav-link" id="btnOpenGallery" href="./login.html">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
           <img src="../img/Button/Btn_openGallery.png" alt="" />
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
-        <a class="mt-1 nav-link" href="./myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+        <a class="mt-1 nav-link" href="{% url 'myPage1' %}" style="display: flex; justify-content: center; align-items: center;">
           <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
         </a>
       </li>
@@ -133,7 +133,7 @@
 
       <!-- 아이콘 - 수정/업로드 -->
       <div class="icon-wrapper">
-        <button id="btnModify" onclick="location.href='post.html'">
+        <button id="btnModify" onclick="location.href='{% url 'post' %}'">
           <img src="../img/Button/Button_reverse/Btn_Modify_Rev.png" alt="" />
         </button>
         <button id="btnUploadPhoto">

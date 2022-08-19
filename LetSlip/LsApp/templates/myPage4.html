@@ -50,13 +50,13 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="../index.html"
+          href="{% url 'index' %}"
         >
           <img src="/LetSlip/static/img/Logo.png" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
-        <a class="nav-link" id="toAboutUs" href="./aboutUs.html">
+        <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
           <img src="/LetSlip/static/img/Button/Btn_toAboutUs.png" alt="" />
         </a>
       </li>
@@ -75,13 +75,13 @@
         <a
           class="mt-1 nav-link"
           id="btnToMyGalleryRainbow"
-          href="./my_gallery_category.html"
+          href="{% url 'my_gallery_category' %}"
         >
           <img src="/LetSlip/static/img/Button/Btn_toMyGallery.png" alt="" />
         </a>
       </li>
       <li class="nav-item">
-        <a class="mt-1 nav-link" id="btnOpenGallery" href="./login.html">
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
           <img src="/LetSlip/static/img/Button/Btn_openGallery.png" alt="" />
         </a>
       </li>

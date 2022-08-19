@@ -53,12 +53,12 @@
           aria-current="page"
           href="../index.html"
         >
-          <img src="/LetSlip/static/img/Logo.png" alt="Let's Slip" />
+          <img src="../img/Logo.png" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
-        <a class="nav-link" id="toAboutUs" href="./aboutUs.html">
-          <img src="/LetSlip/static/img/Button/Btn_toAboutUs.png" alt="" />
+        <a class="nav-link" id="toAboutUs" href="{% url 'aboutUs' %}">
+          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
@@ -76,18 +76,18 @@
         <a
           class="mt-1 nav-link"
           id="btnToMyGalleryRainbow"
-          href="./my_gallery_category.html"
+          href="{% url 'my_gallery_category' %}"
         >
-          <img src="/LetSlip/static/img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
         </a>
       </li>
       <li class="nav-item">
-        <a class="mt-1 nav-link" id="btnOpenGallery" href="./login.html">
-          <img src="/LetSlip/static/img/Button/Btn_openGallery.png" alt="" />
+        <a class="mt-1 nav-link" id="btnOpenGallery" href="{% url 'login' %}">
+          <img src="../img/Button/Btn_openGallery.png" alt="" />
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
-        <a class="mt-1 nav-link" href="./myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+        <a class="mt-1 nav-link" href="{% url 'myPage1' %}" style="display: flex; justify-content: center; align-items: center;">
           <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
         </a>
       </li>
@@ -102,9 +102,9 @@
         <div class="mypage-small-wrapper">
           <a class="mypage-title" href="">내 정보 관리</a>
           <div class="container">
-            <a class="mypageChangeName" href="./myPage2.html">활동 이름 변경</a>
-            <a class="mypageChangeMBTI" href="./myPage3.html">MBTI 변경</a>
-            <a class="mypageChangePw" href="./myPage4.html">비밀번호 변경</a>
+            <a class="mypageChangeName" href="{% url 'myPage2' %}">활동 이름 변경</a>
+            <a class="mypageChangeMBTI" href="{% url 'myPage3' %}">MBTI 변경</a>
+            <a class="mypageChangePw" href="{% url 'myPage4' %}">비밀번호 변경</a>
           </div>
         </div>
         <div class="mypage-small-wrapper">
@@ -131,7 +131,7 @@
       <div class="w-75 m-auto bigWrapper">
         <div class="smallWrapper">
           <div class="container1">
-            <img src="/LetSlip/static/img/Logo.png" alt="." />
+            <img src="/./img/Logo.png" alt="." />
             <p>실패를 전시하는 갤러리</p>
           </div>
           <div class="container2">
@@ -145,7 +145,7 @@
         </div>
         <hr />
         <a href="javascript:void">
-          <img id="instagram" src="/LetSlip/static/img/Button/Btn_Insta.png" alt="" />
+          <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
         </a>
       </div>
     </footer>

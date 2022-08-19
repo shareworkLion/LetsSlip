@@ -50,7 +50,7 @@
           class="nav-link"
           id="btnLogo"
           aria-current="page"
-          href="../index.html"
+          href="{% url 'index' %}"
         >
           <img src="/LetSlip/static/img/Logo.png" alt="Let's Slip" />
         </a>
@@ -75,7 +75,7 @@
         <a
           class="mt-1 nav-link"
           id="btnToMyGalleryRainbow"
-          href="./my_gallery_category.html"
+          href="{% url 'my_gallery_category' %}"
         >
           <img src="/LetSlip/static/img/Button/Btn_toMyGallery.png" alt="" />
         </a>
@@ -86,7 +86,7 @@
         </a>
       </li>
       <li calss="nav-item" style="visibility: hidden;">
-        <a class="mt-1 nav-link" href="./myPage1.html" style="display: flex; justify-content: center; align-items: center;">
+        <a class="mt-1 nav-link" href="{% url 'myPage1' %}" style="display: flex; justify-content: center; align-items: center;">
           <span class="material-icons" style="color: #fff; font-size: 25px; margin-top: 6px">settings</span>
         </a>
       </li>
@@ -95,7 +95,7 @@
     <!-- Change MBTI Section -->
     <div class="inner">
       <!-- 이전 페이지로 -->
-      <button class="m-4 backBtn" onclick="location.href='myPage1.html'">
+      <button class="m-4 backBtn" onclick="location.href='{% url 'myPage1' %}'">
         <span class="material-icons">arrow_back</span>
         <div>이전 페이지으로</div>
       </button>
