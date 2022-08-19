@@ -138,6 +138,11 @@ button {
 }
 
 /* 답글 보기  */
+.slipComments,
+.createComments,
+.hr-class {
+  display: none;
+}
 .slipComments .comments-wrapper {
   width: 80%;
   margin: 0 auto;

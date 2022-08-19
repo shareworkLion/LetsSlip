@@ -1,7 +1,6 @@
 {% load static %}
 <!-- 감상평 작성 화면_1. Slip만 작성된 글/2. 성공기도 작성한 경우
-답글 작성 화면_1. Slip만 작성된 글/2. 성공기도 작성한 경우
-다른 유저꺼임!!!!!!!!!!!!!!!!!!!!! -->
+답글 작성 화면_1. Slip만 작성된 글/2. 성공기도 작성한 경우 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -130,17 +129,18 @@
           </div>
         </div>
       </section>
-
       <!-- 아이콘 - 수정/업로드 -->
       <div class="icon-wrapper">
-        <button id="btnModify">
-          <img src="{% static 'img/Button/Btn_Modify.png' %}" alt="" />
+        <button id="btnModify" onclick="location.href='post.html'">
+          <img src="../img/Button/Button_reverse/Btn_Modify_Rev.png" alt="" />
         </button>
         <button id="btnUploadPhoto">
-          <img src="{% static 'img/Button/Btn_UploadPhoto.png' %}" alt="" />
+          <img
+            src="../img/Button/Button_reverse/Btn_UploadPhoto_Rev.png"
+            alt=""
+          />
         </button>
       </div>
-
       <!-- 구분선 -->
       <hr />
 

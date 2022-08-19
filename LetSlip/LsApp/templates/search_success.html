@@ -1,3 +1,4 @@
+{% load static %}
 <!-- 검색 결과 화면 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +41,7 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
 
-    <link rel="stylesheet" href="/./css/search_success.css" />
+    <link rel="stylesheet" href="{% static 'css/search_success.css' %}" />
   </head>
   <body>
     <!-- HEADER -->
@@ -52,25 +53,31 @@
           aria-current="page"
           href="./index.html"
         >
-          <img src="../img/Logo.png" alt="Let's Slip" />
+          <img src="{% static 'img/Logo.png' %}" alt="Let's Slip" />
         </a>
       </li>
       <li class="nav-item aboutus">
         <a class="nav-link" id="toAboutUs" href="./html/aboutUs.html">
-          <img src="../img/Button/Btn_toAboutUs.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toAboutUs.png' %}" alt="" />
         </a>
       </li>
       <div class="inputWrapper">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
-          aria-label="Search"
-          onkeypress="javascript:if(event.keyCode==13) {btnSearchClicked()}"
-        />
-        <button class="material-icons btnSearch" type="submit" onclick="wow()">
-          search
-        </button>
+        <form action="{% url 'search' %}" method="POST" class="form-control me-2">
+            {% csrf_token %}
+            <input
+              class="form-control me-2"
+              type="search"
+              name="searched"
+              value="{{searched}}"
+              id="search-box"
+              placeholder="다양한 Slip을 검색하며 실패를 즐기세요!"
+              aria-label="Search"
+              onkeypress="javascript:if(event.keyCode==13) {btnSearchClicked()}"
+            />
+            <button class="material-icons btnSearch" type="submit" id="search-box" onclick="wow()">
+              search
+            </button>
+          </form>
       </div>
       <li class="nav-item">
         <a
@@ -78,68 +85,92 @@
           id="btnToMyGalleryRainbow"
           href="./html/slipComments.html"
         >
-          <img src="../img/Button/Btn_toMyGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_toMyGallery.png' %}" alt="" />
         </a>
       </li>
       <li class="nav-item">
         <a class="mt-1 nav-link" id="btnOpenGallery" href="./html/myPage1.html">
-          <img src="../img/Button/Btn_openGallery.png" alt="" />
+          <img src="{% static 'img/Button/Btn_openGallery.png' %}" alt="" />
         </a>
       </li>
     </ul>
     <!-- MY PAGE MAIN SECTION -->
     <section class="searchSuccess">
       <div class="pt-5 pb-3 searchSuccessHeader text-center">
-        <p>'직장'에 대한 검색 결과 입니다.</p>
+        <p>'{{ keyword }}'에 대한 {{ posts.count }}개의 검색 결과 입니다.</p>
       </div>
+      <tbody>
+      {% for post in posts.all %}
       <hr size="4px" color="black" />
       <ul class="list-group m-5">
         <li class="listItem mb-5">
           <div class="resultImg">
-            <img src="../img/SearchSuccessResult_01.png" />
+            {% if post.b_img %}
+            <img src = "{{ post.b_img.url }}" alt="" height="200">
+            {% endif %}
+            <!--<img src="{% static 'img/SearchSuccessResult_01.png' %}" />-->
             <div class="profile">
-              <span>Robert</span>
+              <span>{{ post.user.username }}</span> <!--작성자-->
               <span> | </span>
-              <span style="color: rgb(149, 149, 149)">2022.08.03</span>
+              <span style="color: rgb(149, 149, 149)"> {{ post.regdate|date:'Y.m.d' }}</span>
             </div>
           </div>
           <div class="resultText">
             <hr size="4px" color="black" />
             <p class="resultTitle">
-              <span><img src="../img/Tag_Com.png" /></span>
-              <span>상사랑 베개싸움함</span>
+              <span><img src="{% static 'img/Tag_Com.png' %}" /></span>
+              <span> <a href = "{% url 'post_detail' post.b_no %}">{{ post.b_name }}</span>
             </p>
             <p class="reulstTitle2">당신의 Slip을 들려주세요</p>
             <p class="">
-              내가 이런 얘기를 적게 될 줄이야. 오늘 직장에서 상사와 베개싸움을
-              했다. 실화냐고? 지금 이 글을 적는 내가 생각해도 거짓말 같지만,
-              안타깝게도 실화이다. 문제의 발단은 야근이었다. 며칠 동안 이어지는
-              야근에 피곤했던 나는 회사에 내 전용 베개를 가져다 두었다. 쪽잠을
-              잘 때 베개가 없으면 불편했기 때문이다. 오늘도 평소처럼 야근을
-              하다가 너무 피곤한 나는 베개를 꺼내 휴게 공간으로 향했다. 원래
-              20분 정도만 잘 생각이었는데, 시간이 얼마나 흘렀을까. 누군가 잠을
-              잘 자고 있는 나를 나를 흔들기 시작했다. 회사에는 나를 깨울 사람이
-              없으니까 분명 꿈일 것이라고 생각한 나는...
+              {{ post.b_intro1 }}{{ post.b_intro2 }}{{ post.b_intro3 }}
             </p>
           </div>
         </li>
       </ul>
+      {% endfor %}
+    </tbody>
     </section>
+
     <section class="page mt-5 mb-5">
       <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="#"><</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">></a></li>
+        <li class="page-item">
+          {% if posts.has_previous %}
+          <a href = "?page={{posts.previous_page_number}}">이전</a>
+          {% else %}
+          <a class="page-link" tabindex="-1" aria-disabled="true" href="#">이전</a>
+          {% endif %}
+        </li>
+
+        
+        <li class="page-item">
+        <!-- 페이지리스트 -->
+        {% for page_number in posts.paginator.page_range %}
+            {% if page_number == posts.number %}
+            <a href="?&page={{ page_number }}">{{ page_number }}</a>
+            {% else %}
+            <a href="?&page={{ page_number }}">{{ page_number }}</a>
+            {% endif %}
+        {% endfor %}          
+        </li>
+
+        <li class="page-item">
+          <!-- 다음페이지 -->
+          {% if posts.has_next %}
+          <a href = "?page={{ posts.next_page_number }}">다음</a>
+          {% else %}
+          <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음</a>
+          {% endif %}
+        </li>
       </ul>
     </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="w-75 m-auto bigWrapper">
         <div class="smallWrapper">
           <div class="container1">
-            <img src="/./img/Logo.png" alt="." />
+            <img src="{% static 'img/Logo.png' %}" alt="." />
             <p>실패를 전시하는 갤러리</p>
           </div>
           <div class="container2">
@@ -153,7 +184,7 @@
         </div>
         <hr />
         <a href="javascript:void">
-          <img id="instagram" src="../img/Button/Btn_Insta.png" alt="" />
+          <img id="instagram" src="{% static 'img/Button/Btn_Insta.png' %}" alt="" />
         </a>
       </div>
     </footer>
