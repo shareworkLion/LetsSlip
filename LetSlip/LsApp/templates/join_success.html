@@ -1,9 +1,7 @@
-<<<<<<< HEAD
+{% load static %}
 <!-- 회원가입 축하화면 -->
-<!doctype html>
-=======
+
 <!DOCTYPE html>
->>>>>>> c59ca1deef56e7adfeeb0754a8be04fb362a1930
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -31,7 +29,7 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../css/join_success.css" />
+    <link rel="stylesheet" href="{% static 'css/join_success.css' %}" />
 
     <style>
       .msg {
@@ -56,19 +54,22 @@
         즐겁게 도전하며 나만의 실패 갤러리를 만들어 보세요
       </p>
 
-      <img class="mt-5 mb-5" src="../img/LoginSuccess_logo.png" alt="" />
+      <img class="mt-5 mb-5" src="{% static 'img/LoginSuccess_logo.png' %}" alt="" />
 
       <div class="mb-5 mt-3">
+        <a href="{% url 'home' %}">
         <button class="SeeAroundBtn btn btn-lg w-100 mb-3" type="button">
-          <p class="BtnText">Let's Slip! 둘러보기</p>
-        </button>
+            <p class="BtnText">
+              Let's Slip! 둘러보기</p>
+        </button><a/>
+        <a href="{% url 'gallery' %}">
         <button
           class="GoGalleryBtn btn btn-lg w-100"
           type="button"
           onclick="location.href='my_gallery_category.html'"
         >
           나의 갤러리 보러 가기
-        </button>
+        </button></a>
       </div>
     </main>
   </body>
